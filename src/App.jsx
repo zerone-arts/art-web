@@ -4,6 +4,7 @@ import Intro from "./components/Intro";
 import Page1 from "./components/Page1";
 import gsap from "gsap";
 import Page2 from "./components/Page2";
+import Page3 from "./components/Page3";
 
 function App() {
   const [mouseX, setMouseX] = useState(null);
@@ -69,6 +70,7 @@ function App() {
       <Intro setIntro={setIntro} />
       <Page1 mouseX={mouseX} mouseY={mouseY} intro={intro} />
       <Page2 />
+      <Page3 />
     </div>
   );
 }

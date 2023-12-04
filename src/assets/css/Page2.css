@@ -1,4 +1,477 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
+
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
+* {
+  list-style-type: none;
+}
 .p2-container {
+  position: relative;
   width: 100%;
-  height: 100vh;
+  aspect-ratio: 1/2;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.page2-objects {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  padding-bottom: 100%;
+  --object-1: #671f19;
+  --object-2: #000;
+  --object-3: #6a4730;
+  --object-4: #6d4c52;
+  list-style-type: none;
+}
+/*#page2-object1*/
+#page2-object1 {
+  background-color: var(--object-1);
+  position: absolute;
+  right: 0;
+  width: 80%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#page2-object1 ul:nth-child(1) {
+  position: relative;
+  width: 100%;
+  height: 5%;
+  list-style-type: none;
+  display: flex;
+  align-items: end;
+  font-family: "Montserrat", sans-serif;
+}
+#page2-object1 ul:nth-child(2) {
+  position: absolute;
+  width: 100%;
+  height: 5%;
+  list-style-type: none;
+  display: flex;
+  align-items: end;
+  font-family: "Montserrat", sans-serif;
+  bottom: 5%;
+}
+
+#page2-object1 ul:nth-child(1) li {
+  position: relative;
+  height: 40%;
+  width: 100%;
+  bottom: 0%;
+  border-top: solid;
+  border-color: black;
+  border-width: 1px;
+}
+#page2-object1 ul:nth-child(2) li {
+  position: relative;
+  height: 40%;
+  width: 100%;
+  bottom: 0%;
+  border-bottom: solid;
+  border-color: black;
+  border-width: 1px;
+}
+#page2-object1 ul li a {
+  font-size: 0.9vw;
+}
+#page2-object1 ul li:nth-child(1) {
+  display: flex;
+  padding: 2%;
+  justify-content: center;
+  align-items: center;
+  font-size: 1vw;
+  font-weight: 500;
+  color: rgb(215, 181, 77);
+  border-right: solid;
+  border-color: black;
+  border-width: 1px;
+  text-shadow: rgba(0, 0, 0, 0.5) 1px 1px 1px;
+}
+
+#page2-object1 ul li:nth-child(2) {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  justify-content: center;
+  font-size: 1vw;
+  font-weight: 500;
+  color: black;
+  gap: 20%;
+  border-right: solid;
+  border-color: black;
+  border-width: 1px;
+}
+#page2-object1 ul li:nth-child(2) a {
+  font-weight: 300;
+}
+#page2-object1 ul li:nth-child(3) {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  justify-content: center;
+  font-size: 1vw;
+  font-weight: 500;
+  color: black;
+  gap: 20%;
+  border-right: solid;
+  border-color: black;
+  border-width: 1px;
+}
+#page2-object1 ul li:nth-child(3) a {
+  font-weight: 300;
+}
+#page2-object1 ul li:nth-child(4) {
+  display: flex;
+  flex-direction: column;
+  padding: 2%;
+  justify-content: center;
+  font-size: 1vw;
+  font-weight: 500;
+  color: black;
+  gap: 20%;
+}
+
+#page2-object1 .page2-object1-backgroundText {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  writing-mode: vertical-rl;
+  font-size: 80vw;
+  font-family: "Playfair Display", serif;
+  font-weight: 900;
+  left: 10%;
+  opacity: 0.2;
+}
+
+#page2-object1 .page2-object1-titleText {
+  position: absolute;
+  width: 30%;
+  height: 50%;
+}
+#page2-object1 .page2-object1-titleText p {
+  width: 200%;
+  height: 10%;
+  position: absolute;
+  bottom: 10%;
+  left: 40%;
+  transform: rotate(270deg);
+  transform-origin: left;
+  color: rgb(215, 181, 77);
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  font-size: 4vw;
+}
+#page2-object1 .page2-object1-titleText2 {
+  position: absolute;
+  width: 30%;
+  height: 50%;
+}
+#page2-object1 .page2-object1-titleText2 p {
+  width: 200%;
+  height: 10%;
+  position: absolute;
+  bottom: -10%;
+  left: 110%;
+  transform: rotate(270deg);
+  transform-origin: left;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  font-size: 3vw;
+}
+
+#page2-object1 ul:nth-child(1) li:nth-child(4) a {
+  font-weight: 300;
+}
+
+/*#page2-object2*/
+#page2-object2 {
+  background-color: var(--object-2);
+  position: absolute;
+  left: 5%;
+  width: 88%;
+  height: 25%;
+  top: 6%;
+}
+#page2-object2 .page2-object2-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+}
+
+#page2-object2 .page2-object2-bg .page2-object2-bg-shapes-circle1 {
+  position: absolute;
+  width: 25vw;
+  height: 25vw;
+  border: 2px solid gray;
+  border-radius: 50%;
+  right: -1vw;
+  top: -8vw;
+  opacity: 0.2;
+}
+#page2-object2 .page2-object2-bg .page2-object2-bg-shapes-circle2 {
+  position: absolute;
+  width: 25vw;
+  height: 25vw;
+  border: 2px solid gray;
+  border-radius: 50%;
+  left: -15vw;
+  top: 8vw;
+  background-color: black;
+  opacity: 0.2;
+}
+
+#page2-object2 .page2-object2-bg .page2-object2-bg-shapes-Square {
+  position: absolute;
+  width: 100%;
+  height: 50%;
+  border-top: 2px solid rgba(128, 128, 128, 0.2);
+  border-bottom: 2px solid rgba(128, 128, 128, 0.2);
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#page2-object2 .page2-object2-bg .page2-object2-bg-shapes-Square-text {
+  width: 33%;
+  height: 30%;
+  position: absolute;
+  bottom: 0;
+  left: 5vw;
+  display: flex;
+  opacity: 0.5;
+}
+#page2-object2 .page2-object2-bg .page2-object2-bg-shapes-Square-text li {
+  width: 50%;
+  height: 100%;
+  position: relative;
+
+  color: white;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5vw;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  font-size: 0.8vw;
+}
+
+#page2-object2 .page2-object2-bg .page2-object2-bg-text {
+  padding: 0;
+  position: absolute;
+  color: black;
+
+  text-shadow: -1px -1px 0 rgba(128, 128, 128, 0.2),
+    1px -1px 0 rgba(128, 128, 128, 0.2), -1px 1px 0 rgba(128, 128, 128, 0.2),
+    1px 1px 0 rgba(128, 128, 128, 0.2);
+  font-size: 12vw;
+  text-transform: uppercase;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -30%);
+  /* opacity: 0.3; */
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+}
+#page2-object2 .page2-object2-bg .page2-object2-bg-shapes-Square-left {
+  position: absolute;
+  width: 2.5%;
+  height: 50%;
+  border: 2px solid rgba(128, 128, 128, 0.2);
+  background-color: black;
+  bottom: -10%;
+  left: 10%;
+  transform: rotate(35deg);
+}
+#page2-object2 .page2-object2-bg .page2-object2-bg-shapes-Square-right {
+  position: absolute;
+  width: 2.5%;
+  height: 100%;
+  border: 2px solid rgba(128, 128, 128, 0.2);
+  background-color: black;
+  bottom: -10%;
+  right: 45%;
+  transform: rotate(-40deg);
+}
+
+#page2-object2 .page2-object2-topBar {
+  position: relative;
+  width: 100%;
+  height: 20%;
+  display: flex;
+}
+#page2-object2 .page2-object2-topBar .page2-object2-topBar-title {
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+  gap: 2vw;
+  padding-left: 5%;
+  width: 45%;
+}
+#page2-object2 .page2-object2-topBar .page2-object2-topBar-title h2 {
+  font-weight: 400;
+  font-size: 3vw;
+  color: white;
+}
+
+#page2-object2 .page2-object2-topBar .page2-object2-topBar-title i {
+  position: relative;
+  text-shadow: -1px -1px 0 rgba(255, 255, 255, 0.2),
+    1px -1px 0 rgba(255, 255, 255, 0.2), -1px 1px 0 rgba(255, 255, 255, 0.2),
+    1px 1px 0 rgba(255, 255, 255, 0.2);
+  font-size: 2vw;
+  top: 0.3vw;
+}
+
+#page2-object2 .page2-object2-bottom-title {
+  position: absolute;
+  width: 50%;
+  height: 20%;
+
+  bottom: 0;
+  font-family: "Montserrat", sans-serif;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#page2-object2 .page2-object2-bottom-title h2 {
+  font-size: 3vw;
+  font-weight: 400;
+}
+
+#page2-object2 .page2-object2-topBar ul {
+  width: 55%;
+  color: white;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  font-size: 0.8vw;
+}
+#page2-object2 .page2-object2-topBar ul li {
+  padding-left: 10px;
+  display: flex;
+  align-items: left;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.5vw;
+}
+#page2-object2 .page2-object2-topBar ul li p:nth-child(1) {
+  opacity: 0.6;
+}
+#page2-object2 .page2-object2-topBar ul li p:nth-child(2) {
+  opacity: 0.4;
+}
+
+#page2-object2 .page2-object2-s-photo {
+  position: relative;
+  width: 15vw;
+  height: 17vw;
+  left: 5vw;
+}
+#page2-object2 .page2-object2-s-photo .page2-object2-s-photo-imgBox {
+  position: relative;
+  width: 100%;
+  height: 13vw;
+  background-color: red;
+}
+#page2-object2 .page2-object2-s-photo .page2-object2-s-photo-imgBox img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#page2-object2 .page2-object2-s-photo ul {
+  position: relative;
+  width: 100%;
+  height: 6vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 0.8vw;
+  opacity: 0.8;
+}
+#page2-object2 .page2-object2-s-photo ul::before {
+  content: "";
+  position: absolute;
+  left: -2vw;
+  width: 0.05vw;
+  height: 2vw;
+  background-color: white;
+}
+#page2-object2 .page2-object2-s-photo ul::after {
+  content: "";
+  position: absolute;
+  left: -1.6vw;
+  width: 0.05vw;
+  height: 2vw;
+  background-color: white;
+}
+
+#page2-object2 .page2-object2-m-photo {
+  position: absolute;
+  width: 17vw;
+  height: 15vw;
+  left: 52%;
+  top: 35%;
+  transform: translate(-50%, -30%);
+  background-color: blue;
+  box-shadow: 5px 5px 20px 1px rgba(0, 0, 0, 0.2);
+}
+#page2-object2 .page2-object2-m-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#page2-object2 .page2-object2-l-photo {
+  position: absolute;
+  width: 50%;
+  height: 80%;
+  background-color: gray;
+  top: 20%;
+  right: 0;
+}
+
+#page2-object2 .page2-object2-l-photo img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+#page2-object2 .page2-object2-l-photo p {
+  position: absolute;
+  color: black;
+  font-size: 1.5vw;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 500;
+  top: 20%;
+  left: 20%;
+  text-shadow: 3px 3px 2px rgba(0, 0, 0, 0.1);
+}
+
+/*#page2-object3*/
+#page2-object3 {
+  background-color: var(--object-3);
+  position: absolute;
+  right: 0%;
+  width: 45%;
+  height: 30%;
+  top: 28%;
+}
+/*#page2-object4*/
+#page2-object4 {
+  background-color: var(--object-4);
+  position: absolute;
+  left: 10%;
+  width: 80%;
+  height: 25%;
+  top: 63%;
 }
