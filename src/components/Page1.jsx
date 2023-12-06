@@ -4,7 +4,7 @@ import gsap from "gsap";
 import { ReactComponent as NodeIcon } from "../assets/icon/nodeIcon.svg";
 import koFlag from "../assets/img/Koflag.png";
 import profile2 from "../assets/img/profile2.jpeg";
-import cube3d from "../assets/img/3d-cube.png";
+import divid from "../assets/img/divid.png";
 import saturn from "../assets/img/saturn.png";
 import timer from "../assets/img/timer.png";
 
@@ -20,7 +20,7 @@ function Page1({ mouseX, mouseY, intro }) {
   const centerBoxLineRef = useRef(null);
   const leftTopCircleBg = useRef(null);
   const RightBottomCircleBg = useRef(null);
-  const cube3dBg = useRef(null);
+  const lensBg = useRef(null);
   const saturnBg = useRef(null);
   const arrowRef = useRef(null);
   const topLeftRef = useRef(null);
@@ -76,9 +76,9 @@ function Page1({ mouseX, mouseY, intro }) {
     RightBottomCircleBg.current.style.transform = `translate(${
       (mouseX - pageX) * 0.03
     }px,${(mouseY - pageY) * 0.03}px)`;
-    cube3dBg.current.style.transform = `translate(${
-      (mouseX - pageX) * 0.03
-    }px,${(mouseY - pageY) * 0.03}px)`;
+    lensBg.current.style.transform = `translate(${(mouseX - pageX) * 0.03}px,${
+      (mouseY - pageY) * 0.03
+    }px)`;
     saturnBg.current.style.transform = `translate(${
       (mouseX - pageX) * -0.03
     }px,${(mouseY - pageY) * -0.03}px)`;
@@ -110,7 +110,7 @@ function Page1({ mouseX, mouseY, intro }) {
         <div className="arrow" ref={arrowRef}></div>
       </div>
 
-      <img src={cube3d} alt="3d-cube" id="cube3d" ref={cube3dBg} />
+      <img src={divid} alt="divid" id="lens" ref={lensBg} />
       <img src={saturn} alt="saturn" id="saturn" ref={saturnBg} />
 
       <div className="center-box" ref={centerBoxRef}>

@@ -1,6 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+
 .p3-container {
   width: 100%;
   height: 100vh;
   background-color: black;
   position: relative;
+  font-family: "Montserrat", sans-serif;
+}
+
+.page3-topBar {
+  position: absolute;
+  width: 100%;
+  margin-top: 5vw;
+  height: 5vw;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.page3-topBar > li {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-right: 0.5px solid rgba(255, 255, 255, 0.5);
+  border-top: 0.5px solid rgba(255, 255, 255, 0.5);
+  display: flex;
+}
+.page3-topBar > li:nth-child(2),
+.page3-topBar > li:nth-child(3),
+.page3-topBar > li:nth-child(4) {
+  flex-direction: column;
+  justify-content: end;
+  gap: 0.5vw;
+  font-size: 1vw;
+  padding-left: 2vw;
+  padding-bottom: 0.5vw;
+}
+
+.page3-topBar > li:last-child {
+  border-right: none;
+}
+
+.page3-topBar-list1-logo {
+  position: relative;
+  width: 40%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 2vw;
+}
+
+.page3-topBar-list1-logo > li {
+  position: relative;
+  width: 2vw;
+  height: 2vw;
+  background-color: red;
+  border-radius: 50%;
+}
+
+.cresent::before {
+  content: "";
+  position: absolute;
+  width: 1.8vw;
+  height: 1.8vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(-40%, -50%);
+  border-radius: 50%;
+  background-color: black;
+}
+.halfmoon::before {
+  content: "";
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  top: 50%;
+  left: 50%;
+  transform: translate(0, -50%);
+  background-color: black;
+}
+
+#page3-topBar-list1-title {
+  width: 60%;
+  height: 100%;
+  color: red;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: end;
+  font-size: 1.2vw;
+  gap: 0.5vw;
+  padding-bottom: 0.5vw;
+}
+
+.page3-topBar > li:nth-child(2) p,
+.page3-topBar > li:nth-child(3) p,
+.page3-topBar > li:nth-child(4) p {
+  position: relative;
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.page3-topBar > li:nth-child(2) p span,
+.page3-topBar > li:nth-child(3) p span,
+.page3-topBar > li:nth-child(4) p span {
+  color: white;
+  font-weight: 700;
+  margin-right: 0.3vw;
+}
+
+.list4-moon {
+  position: absolute;
+
+  width: 7vw;
+  height: 3vw;
+  right: 3vw;
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.5vw;
+}
+
+.list4-moon li {
+  position: relative;
+  background-color: red;
+  width: 2vw;
+  height: 2vw;
+  border-radius: 50%;
+}
+.list4-moon li:nth-child(1) {
+  left: 0.5vw;
+  z-index: 1;
+}
+.list4-halfmoon::before {
+  content: "";
+  position: absolute;
+  width: 2vw;
+  height: 2vw;
+  top: 50%;
+  left: 0%;
+  transform: translate(-50%, -50%);
+  background-color: black;
+}
+.list4-cresent::before {
+  content: "";
+  position: absolute;
+  width: 1.9vw;
+  height: 1.9vw;
+  top: 50%;
+  left: -50%;
+  transform: translate(50%, -50%);
+  border-radius: 50%;
+  background-color: black;
 }

@@ -3,6 +3,15 @@ import "../assets/css/Page2.css";
 import Simg from "../assets/img/page2-object2-3.png";
 import Mimg from "../assets/img/page2-object2-2.jpeg";
 import Limg from "../assets/img/page2-object2-1.png";
+import object4Img1 from "../assets/img/page2-object4-1.jpeg";
+import object4Img2 from "../assets/img/page2-object4-2.jpeg";
+import object4Img3 from "../assets/img/page2-object4-3.jpeg";
+import object4Img4 from "../assets/img/page2-object4-4.jpeg";
+import object4Img5 from "../assets/img/page2-object4-5.jpeg";
+import object4Img6 from "../assets/img/page2-object4-6.jpeg";
+import object4Img7 from "../assets/img/page2-object4-7.jpeg";
+import object4Img8 from "../assets/img/page2-object4-8.jpeg";
+
 function Page2(props) {
   return (
     <div className="p2-container">
@@ -132,9 +141,127 @@ function Page2(props) {
             <img src={Mimg} alt="Mimg" />
           </div>
         </div>
-        <div id="page2-object3"></div>
-        <div id="page2-object4"></div>
-        <div id="page2-object5"></div>
+        <div id="page2-object3">
+          <div className="page2-object3-bg">
+            <div className="page2-object3-bg-logo">Z</div>
+          </div>
+          <ul className="page2-object3-topBar">
+            <li>001</li>
+            <li>From KOR Jeju</li>
+            <li>Gallery</li>
+          </ul>
+          <div className="page2-object3-topBar-next">with art love !</div>
+          <div className="page2-object3-title">
+            <p>
+              Next level
+              <br></br>Fairs
+            </p>
+          </div>
+          <div className="page2-object3-line"></div>
+          <div className="page2-object3-stitle">Private gallery</div>
+          <ul className="page2-object3-bottomBar">
+            <li>Stages</li>
+            <li>Exhibitions</li>
+            <li>Installations</li>
+          </ul>
+        </div>
+        <div id="page2-object4">
+          <div className="page2-object4-bg">
+            <div className="page2-object4-bg-shapes-Square">
+              <div className="page2-object4-bg-shapes-Square-text1">
+                <p>September 11</p>
+                <p> - October 24, 2018</p>
+              </div>
+              <div className="page2-object4-bg-shapes-Square-text2">
+                <p>Zero One Kim Gallery</p>
+                <p>10-5, Geonju-ro 4-gil, Jeju-si, Jeju-do, KOR</p>
+              </div>
+            </div>
+            <div className="page2-object4-bg-shapes-circle1"></div>
+            <div className="page2-object4-bg-shapes-circle2"></div>
+            <div className="page2-object4-bg-shapes-Square-left"></div>
+            <div className="page2-object4-bg-shapes-Square-right"></div>
+          </div>
+          <div className="page2-object4-textBox">
+            <div className="page2-object4-textBox-topBar">
+              <div className="page2-object4-textBox-topBar-left">
+                Small Cities
+              </div>
+              <div className="page2-object4-textBox-topBar-right">
+                <p>City of Calgary</p>
+                <p>It's been a big week</p>
+                <p>in art, With Jim</p>
+                <p>Pavilidis</p>
+              </div>
+            </div>
+            <div className="page2-object4-textBox-bottomBar">
+              <div className="page2-object4-textBox-bottomBar-left">
+                <p> Bigger Art Shows</p>
+              </div>
+              <div className="page2-object4-textBox-bottomBar-right">
+                <p>It`s art and we're proud: 24-hour hummers</p>
+                <p>drown out cruel gibes</p>
+              </div>
+            </div>
+            <div className="page2-object4-textBox-center">
+              <div>
+                We <br />
+                have the most <br />
+                mobile exhibitions
+              </div>
+              <div>
+                We <br />
+                have the most <br />
+                mobile exhibitions
+              </div>
+              <div>
+                We <br />
+                have the most <br />
+                mobile exhibitions
+              </div>
+              <div>
+                We <br />
+                have the most <br />
+                mobile exhibitions
+              </div>
+              <div>
+                We <br />
+                have the most <br />
+                mobile exhibitions
+              </div>
+            </div>
+            <div className="page2-object4-imgBox">
+              <ul>
+                <li>
+                  <img src={object4Img1} alt="object4Img1" />
+                </li>
+                <li>
+                  <img src={object4Img2} alt="object4Img2" />
+                </li>
+                <li>
+                  <img src={object4Img3} alt="object4Img3" />
+                </li>
+
+                <li>
+                  <img src={object4Img7} alt="object4Img4" />
+                </li>
+                <li>
+                  <img src={object4Img5} alt="object4Img5" />
+                </li>
+                <li>
+                  <img src={object4Img6} alt="object4Img6" />
+                </li>
+                <li>
+                  <img src={object4Img4} alt="object4Img7" />
+                </li>
+                <li>
+                  <img src={object4Img8} alt="object4Img8" />
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div id="page2-bottomBg"></div>
       </div>
     </div>
   );

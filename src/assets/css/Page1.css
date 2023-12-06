@@ -69,13 +69,13 @@
   opacity: 0.8;
 }
 
-#cube3d {
+#lens {
   position: absolute;
-  width: 150px;
-  height: 150px;
-  left: 70%;
+  width: 300px;
+  height: 300px;
+  left: 65%;
   top: 10%;
-  opacity: 0.4;
+  opacity: 0.5;
 }
 #saturn {
   position: absolute;
