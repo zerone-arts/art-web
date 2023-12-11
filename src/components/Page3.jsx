@@ -2,11 +2,13 @@ import React from "react";
 import "../assets/css/Page3.css";
 import page3Bg from "../assets/img/page3-bg.png";
 import page3BgTitle from "../assets/img/page3-bg-title.png";
-import page3Object2Img from "../assets/img/page3-object1-img.png";
+import page3Object2Img from "../assets/img/page3-object2-Img2.jpeg";
 import page3ObjectMan from "../assets/img/page3-object2-1.png";
 import page3ObjectGirl from "../assets/img/page3-object2-2.jpeg";
 import page3Object3Img from "../assets/img/page3-object3-img.png";
-
+import page3Object4Img from "../assets/img/page3-object4-img.png";
+import page3Object5Img1 from "../assets/img/page2-object5-Img1.jpeg";
+import page3Object5Img2 from "../assets/img/page2-object5-Img2.jpeg";
 function Page3(props) {
   return (
     <div className="p3-container">
@@ -80,13 +82,18 @@ function Page3(props) {
         <div className="p3-object2-imgBox">
           <img src={page3Object2Img} alt="img" />
         </div>
-        <div className="p3-object2-title">Violet Chun sik</div>
+        <div className="p3-object2-title">
+          It's impossible <br />
+          <span>but</span>
+        </div>
         <div className="p3-object2-date">April 12, 2023</div>
         <div className="p3-object2-Topnumber">02</div>
         <div className="p3-object2-Bottomnumber">27</div>
         <div className="p3-object2-bottom-title">Never Not</div>
         <div className="p3-object2-left-bottom">
-          <p>In my heart with the</p>
+          <p>
+            In my <span>heart</span> with the
+          </p>
           <p>memories we made</p>
         </div>
       </div>
@@ -121,7 +128,97 @@ function Page3(props) {
           <div className="p3-object3-titleBox-line"></div>
         </div>
       </div>
-      <div className="p3-object4"></div>
+
+      <div className="p3-object5">
+        <ul className="p3-object5-topBar">
+          <li>
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </li>
+          <li>story</li>
+          <li>feeds/post</li>
+          <li>reels </li>
+        </ul>
+        <ul className="p3-object5-leftBar">
+          <li>05</li>
+          <li></li>
+          <li>MINIMALIST TYPOGRAPHY</li>
+          <li></li>
+          <li>+</li>
+          <li>+</li>
+          <li>+</li>
+        </ul>
+        <div className="p3-object5-imgBox1">
+          <img src={page3Object5Img1} alt="page3Object5Img1" />
+        </div>
+        <div className="p3-object5-imgBox2">
+          <img src={page3Object5Img2} alt="page3Object5Img2" />
+        </div>
+        <ul className="p3-object5-textBox1">
+          <li>
+            Minimal
+            <br />
+            list
+          </li>
+          <li>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Quasi nemo
+            odio, molestias, hic consequuntur amet recusandae eligendi quaerat
+            error commodi accusantium.
+          </li>
+          <li>view more</li>
+        </ul>
+        <ul className="p3-object5-textBox2">
+          <li>
+            Typography<span>Stories</span>
+          </li>
+          <li>12/11/2023</li>
+          <li>
+            Instastory<span>Challenge</span>
+          </li>
+          <li>18:57 PM</li>
+        </ul>
+
+        <div className="p3-object5-rightTop">
+          <i className="fa-solid fa-moon"></i>
+        </div>
+      </div>
+      <div className="p3-object4">
+        <img src={page3Object4Img} alt="page3Object4Img" />
+        <ul className="p3-object4-topBar">
+          <li>illust</li>
+          <li>04</li>
+        </ul>
+        <ul className="p3-object4-date">
+          <li>2023</li>
+          <li>December 10</li>
+        </ul>
+        <ul className="p3-object4-profile">
+          <li>
+            <span>An</span>drew
+          </li>
+          <li>chunsik</li>
+          <li>
+            Lorem ipsum dolor,
+            <br /> sit amet consectetur <br />
+            adipisicing elit. Quibusdam adipisci dolore saepe tempore corrupti
+            assumenda. <br />
+            Lorem ipsum dolor
+            <br /> sit amet.
+          </li>
+        </ul>
+        <div className="p3-object4-rightLine"></div>
+        <ul className="p3-object4-colorBlock">
+          <li>White</li>
+          <li>
+            <div>illustration</div>
+            <img src={page3Object4Img} alt="page3Object4Img" />
+          </li>
+          <li></li>
+        </ul>
+        <div className="p3-object4-bottombar">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Non deleniti
+          voluptates, nihil corporis modi dolor!
+        </div>
+      </div>
     </div>
   );
 }

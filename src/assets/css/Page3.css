@@ -2,7 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
-
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 .p3-container {
   width: 100%;
 
@@ -192,7 +192,7 @@
 .p3-pageBg {
   position: relative;
   width: 90%;
-  height: 100vw;
+  height: 150vw;
   left: 5%;
   top: 11vw;
   background-color: #5f4fb5;
@@ -310,6 +310,10 @@
   font-weight: 100;
   font-size: 2vw;
   letter-spacing: 0.1vw;
+  color: #88a8b7;
+}
+.p3-object2-title span {
+  color: black;
 }
 
 .p3-object2-date {
@@ -319,6 +323,7 @@
   writing-mode: vertical-lr;
   left: 42%;
   top: 7%;
+  color: #88a8b7;
 }
 
 .p3-object2-left-bottom {
@@ -328,6 +333,9 @@
   font-weight: 100;
   font-size: 1.2vw;
   transform: rotate(-90deg);
+}
+.p3-object2-left-bottom p span {
+  color: #88a8b7;
 }
 .p3-object2-bottom-title {
   position: absolute;
@@ -379,6 +387,7 @@
   font-weight: 700;
   right: 1vw;
   top: 0vw;
+  font-size: 2vw;
 }
 
 .p3-object3-imgBox img {
@@ -530,10 +539,384 @@
   position: absolute;
   width: 30%;
   height: 40vw;
-  top: 120vw;
+  top: 115vw;
   left: 30%;
   transform: translateX(-50%);
-  border: 1px solid red;
   font-family: "Playfair Display", sans-serif;
   display: flex;
+  color: white;
+  overflow: hidden;
+}
+
+.p3-object4 img {
+  position: absolute;
+  width: 75%;
+  bottom: 0;
+  left: 12.5%;
+}
+
+.p3-object4-topBar {
+  width: 100%;
+  height: 5%;
+}
+.p3-object4-topBar li:nth-child(1) {
+  font-size: 1vw;
+  position: absolute;
+
+  top: -0.1vw;
+  letter-spacing: 0.1vw;
+}
+
+.p3-object4-topBar li:nth-child(2) {
+  font-size: 2.5vw;
+  position: absolute;
+  top: -1vw;
+  right: 0;
+}
+
+.p3-object4-date {
+  position: absolute;
+
+  width: 25%;
+  height: 10%;
+  right: 0;
+  top: 10%;
+  text-align: right;
+  font-family: "Montserrat", sans-serif;
+  font-size: 1vw;
+  font-weight: 300;
+  display: flex;
+  flex-direction: column;
+  gap: 0.3vw;
+}
+.p3-object4-date li:nth-child(1) {
+  font-weight: 600;
+}
+
+.p3-object4-profile {
+  position: absolute;
+
+  width: 50%;
+  height: 70%;
+  top: 30%;
+  right: 0;
+  text-align: right;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: end;
+}
+
+.p3-object4-profile li:nth-child(1) {
+  font-size: 3vw;
+  font-weight: 700;
+  letter-spacing: 0.5vw;
+  position: relative;
+  right: -0.5vw;
+  font-family: "Playfair Display", sans-serif;
+}
+.p3-object4-profile li:nth-child(1) span {
+  color: black;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+}
+
+.p3-object4-profile li:nth-child(2) {
+  position: relative;
+  letter-spacing: 0.5vw;
+  font-size: 1vw;
+  right: -0.5vw;
+}
+.p3-object4-profile li:nth-child(3) {
+  font-size: 0.8vw;
+  position: relative;
+  width: 100%;
+  top: 0.8vw;
+}
+.p3-object4-profile li:nth-child(4) {
+  position: absolute;
+  font-size: 0.8vw;
+  background-color: white;
+  width: 0.5vw;
+  height: 40%;
+
+  bottom: 1vw;
+}
+
+.p3-object4-rightLine {
+  width: 1.5vw;
+  height: 1.5vw;
+  border: 1px solid white;
+  border-radius: 50%;
+  position: absolute;
+  right: -0;
+  top: 80%;
+}
+
+.p3-object4-rightLine::before {
+  position: absolute;
+  content: "";
+  width: 0.1vw;
+  height: 3vw;
+  top: 2vw;
+  left: 0.55vw;
+  background-color: white;
+}
+.p3-object4-rightLine::after {
+  position: absolute;
+  content: "";
+  width: 0.1vw;
+  height: 3vw;
+  top: -3.5vw;
+  left: 0.55vw;
+  background-color: white;
+}
+
+.p3-object4-colorBlock {
+  position: absolute;
+  width: 50%;
+  height: 75%;
+  top: 20%;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8vw;
+}
+
+.p3-object4-colorBlock li:nth-child(1) {
+  font-size: 1vw;
+  text-transform: uppercase;
+  letter-spacing: 0.1vw;
+}
+
+.p3-object4-colorBlock li:nth-child(2) {
+  width: 40%;
+  height: 100%;
+  background-color: white;
+  overflow: hidden;
+}
+.p3-object4-colorBlock li:nth-child(2) img {
+  position: relative;
+  width: 300%;
+  top: 10%;
+  left: 0;
+  opacity: 0.2;
+}
+.p3-object4-colorBlock li:nth-child(2) div {
+  position: absolute;
+  color: #5f4fb5;
+  writing-mode: vertical-lr;
+  text-orientation: upright;
+  font-size: 1vw;
+  letter-spacing: 0.8vw;
+}
+.p3-object4-colorBlock li:nth-child(3) {
+  width: 40%;
+  height: 3%;
+  background-color: white;
+}
+
+.p3-object4-bottombar {
+  position: absolute;
+  width: 100%;
+  height: 2vw;
+  bottom: 0;
+
+  white-space: nowrap;
+  font-size: 0.8vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.p3-object5 {
+  position: absolute;
+  width: 60%;
+  height: 30vw;
+  top: 150vw;
+  right: 10%;
+  background-color: white;
+  font-family: "Poppins", sans-serif;
+  display: flex;
+}
+
+.p3-object5-topBar {
+  position: relative;
+  width: 45%;
+  height: 1.5vw;
+  margin-top: 1.2vw;
+  margin-left: 6vw;
+  border: 0.15vw solid black;
+  border-radius: 2.5vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: 0.6vw;
+  text-transform: uppercase;
+  padding: 0 1vw 0 1vw;
+}
+
+.p3-object5-topBar li:nth-child(2) {
+  font-weight: 700;
+}
+
+.p3-object5-leftBar {
+  position: absolute;
+  width: 3vw;
+  height: 77%;
+  margin-top: 4vw;
+  margin-left: 1.5vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.p3-object5-leftBar li:nth-child(1) {
+  font-size: 1.5vw;
+  font-weight: 500;
+}
+
+.p3-object5-leftBar li:nth-child(2) {
+  height: 3.8vw;
+  border: 0.01vw solid black;
+  background-color: black;
+  margin-bottom: 0.5vw;
+}
+.p3-object5-leftBar li:nth-child(3) {
+  font-size: 0.55vw;
+  writing-mode: vertical-rl;
+  transform: scale(-1);
+  margin-bottom: 0.5vw;
+  font-weight: 600;
+}
+.p3-object5-leftBar li:nth-child(4) {
+  height: 3.8vw;
+  border: 0.05vw solid black;
+  margin-bottom: 2vw;
+  background-color: black;
+}
+.p3-object5-leftBar li:nth-child(5),
+.p3-object5-leftBar li:nth-child(6),
+.p3-object5-leftBar li:nth-child(7) {
+  margin-bottom: 0.5vw;
+  font-size: 0.8vw;
+  /* border: 0.1vw solid red; */
+  height: 0.5vw;
+}
+
+.p3-object5-imgBox1 {
+  position: absolute;
+  width: 60%;
+  height: 70%;
+  margin-top: 4vw;
+  margin-left: 6vw;
+  background-color: black;
+}
+.p3-object5-imgBox1 img,
+.p3-object5-imgBox2 img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.p3-object5-imgBox2 {
+  position: absolute;
+  width: 18%;
+  height: 70%;
+  margin-top: 4vw;
+  margin-left: calc(8vw + 60%);
+  background-color: black;
+}
+
+.p3-object5-textBox1 {
+  position: absolute;
+  width: 15vw;
+  height: 12vw;
+  bottom: 0;
+  left: 11vw;
+}
+.p3-object5-textBox1 li:nth-child(1) {
+  margin-top: 3.7vw;
+  font-size: 2.2vw;
+  font-weight: 600;
+  text-transform: uppercase;
+  line-height: 2vw;
+  letter-spacing: 0.1vw;
+  color: #4355a7;
+}
+.p3-object5-textBox1 li:nth-child(2) {
+  margin-top: 0.3vw;
+  font-size: 0.5vw;
+}
+.p3-object5-textBox1 li:nth-child(3) {
+  position: relative;
+  margin-top: 0.5vw;
+  font-size: 0.5vw;
+  text-align: right;
+}
+.p3-object5-textBox1 li:nth-child(3)::before {
+  position: absolute;
+  content: "";
+  width: 77%;
+  left: 0vw;
+  top: 0.33vw;
+  border-top: 0.01vw solid black;
+}
+
+.p3-object5-textBox2 {
+  position: absolute;
+  width: 12vw;
+  height: 2.5vw;
+  left: calc(6vw + 60% - 12vw);
+  top: calc(3.7vw + 70%);
+  font-size: 0.5vw;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  margin-top: 1vw;
+}
+
+.p3-object5-textBox2 li {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  position: relative;
+  width: 50%;
+  font-weight: 600;
+}
+
+.p3-object5-textBox2 li span {
+  font-weight: 400;
+  position: relative;
+  margin-left: 0.3vw;
+}
+.p3-object5-textBox2 li:nth-child(2n + 1) {
+  justify-content: start;
+}
+
+.p3-object5-rightTop {
+  position: absolute;
+
+  width: 1.5vw;
+  height: 1.5vw;
+  font-size: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  right: 1.5vw;
+  top: 1vw;
+}
+.p3-object5-rightTop::before {
+  content: "";
+  position: absolute;
+  border-top: 0.05vw solid black;
+  width: 8vw;
+  left: -8.5vw;
+}
+.p3-object5-rightTop::after {
+  content: "";
+  position: absolute;
+  border-left: 0.05vw solid black;
+  height: 11vw;
+  left: 0.7vw;
+  top: 2vw;
 }
