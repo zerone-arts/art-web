@@ -9,9 +9,19 @@ import page3Object3Img from "../assets/img/page3-object3-img.png";
 import page3Object4Img from "../assets/img/page3-object4-img.png";
 import page3Object5Img1 from "../assets/img/page2-object5-Img1.jpeg";
 import page3Object5Img2 from "../assets/img/page2-object5-Img2.jpeg";
+import page3Object6Sign from "../assets/img/page3-object6-sign2.png";
+import page3Object6qr from "../assets/img/page3-object6-qr2.png";
+import page3Object6Img2 from "../assets/img/page3-object6-img2.jpeg";
+
+const object5TitleCircle = "Naci para conocerte. Luceat lux.";
+const object5TitleCircleArr = Array.from(object5TitleCircle);
+
 function Page3(props) {
   return (
     <div className="p3-container">
+      <div className="p3-bg-anime">
+        <div className="p3-bg-anime-circle"></div>
+      </div>
       <div className="p3-bg">
         <img src={page3Bg} alt="page3Bg" />
       </div>
@@ -132,7 +142,7 @@ function Page3(props) {
       <div className="p3-object5">
         <ul className="p3-object5-topBar">
           <li>
-            <i class="fa-solid fa-magnifying-glass"></i>
+            <i className="fa-solid fa-magnifying-glass"></i>
           </li>
           <li>story</li>
           <li>feeds/post</li>
@@ -180,6 +190,55 @@ function Page3(props) {
         <div className="p3-object5-rightTop">
           <i className="fa-solid fa-moon"></i>
         </div>
+      </div>
+      <div className="p3-object6">
+        <div className="p3-object6-imgBox">
+          <img src={page3Object6Img2} alt="Object6Img" />
+        </div>
+        <div className="p3-object6-titleBox">
+          <div className="p3-object6-titleBox-circle">
+            {object5TitleCircleArr.map((item, idx) => {
+              return (
+                <span key={idx} style={{ transform: `rotate(${idx * 9}deg)` }}>
+                  {item}
+                </span>
+              );
+            })}
+          </div>
+          <div className="p3-object6-titleBox-title">Yarrow</div>
+        </div>
+        <div className="p3-object6-sign">
+          <img src={page3Object6Sign} alt="sign" />
+        </div>
+        <ul className="p3-object6-leftText">
+          <li>Photography</li>
+          <li>Illustration</li>
+          <li>Daily Instagram</li>
+        </ul>
+        <ul className="p3-object6-rightText">
+          <li>Typography</li>
+          <li></li>
+          <li>
+            <span></span>
+            <span></span>
+            <span></span>
+          </li>
+        </ul>
+        <div className="p3-object6-qrcode">
+          <img src={page3Object6qr} alt="qrcode" />
+        </div>
+        <ul className="p3-object6-iconLogo">
+          <li>
+            <a href="#">
+              <i className="fa-brands fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#">
+              <i className="fa-brands fa-pinterest-p"></i>
+            </a>
+          </li>
+        </ul>
       </div>
       <div className="p3-object4">
         <img src={page3Object4Img} alt="page3Object4Img" />

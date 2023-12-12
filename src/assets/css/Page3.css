@@ -3,6 +3,8 @@
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&display=swap");
+
 .p3-container {
   width: 100%;
 
@@ -11,6 +13,35 @@
   font-family: "Montserrat", sans-serif;
 }
 
+.p3-bg-anime {
+  z-index: 10;
+  position: absolute;
+  width: 25vw;
+  height: 25vw;
+  top: 190vw;
+  right: 7%;
+  border: 1px solid white;
+  transform-style: preserve-3d;
+}
+.p3-bg-anime-circle {
+  position: absolute;
+  width: 80%;
+  height: 80%;
+  border-radius: 50%;
+  top: 10%;
+  left: 10%;
+  transform: rotateX(60deg) rotateY(145deg);
+  border: 1px solid white;
+}
+
+.p3-pageBg {
+  position: relative;
+  width: 90%;
+  height: 170vw;
+  left: 5%;
+  top: 11vw;
+  background-color: #5f4fb5;
+}
 .p3-bg {
   position: absolute;
   width: 100%;
@@ -26,6 +57,7 @@
 
   transform: translate(-50%, -5%);
 }
+
 .page3-topBar {
   position: absolute;
   width: 100%;
@@ -187,15 +219,6 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
-}
-
-.p3-pageBg {
-  position: relative;
-  width: 90%;
-  height: 150vw;
-  left: 5%;
-  top: 11vw;
-  background-color: #5f4fb5;
 }
 
 .p3-object1 {
@@ -919,4 +942,182 @@
   height: 11vw;
   left: 0.7vw;
   top: 2vw;
+}
+
+.p3-object6 {
+  position: absolute;
+  width: 40%;
+  height: 60vw;
+  top: 177vw;
+  left: 25%;
+  background-color: rgb(237, 237, 237);
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  color: var(--pointColor);
+
+  --pointColor: #bc8ca6;
+}
+
+.p3-object6-imgBox {
+  position: absolute;
+  left: 15%;
+  width: 70%;
+  height: 70%;
+  top: 18%;
+
+  overflow: hidden;
+}
+.p3-object6-imgBox img {
+  width: 100%;
+  position: absolute;
+  top: -10%;
+}
+.p3-object6-titleBox {
+  position: absolute;
+  width: 60%;
+  height: 10vw;
+  left: 50%;
+  transform: translate(-50%);
+  font-family: "Kalnia", serif;
+  font-weight: 700;
+  color: var(--pointColor);
+  /* border: 1px solid red; */
+}
+
+.p3-object6-titleBox-title {
+  position: absolute;
+  display: inline-block;
+  background-color: rgb(237, 237, 237);
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 15%);
+  font-size: 3vw;
+}
+
+.p3-object6-titleBox-circle {
+  position: absolute;
+  width: 7vw;
+  height: 7vw;
+  top: 20%;
+  left: 5%;
+  border-radius: 50%;
+  transform: rotate(175deg);
+}
+
+.p3-object6-titleBox-circle span {
+  position: absolute;
+  font-weight: 500;
+  left: 50%;
+  font-size: 0.8vw;
+  transform-origin: 0 4vw;
+}
+
+.p3-object6-sign {
+  position: absolute;
+  width: 20%;
+  height: 3vw;
+  color: var(--pointColor);
+  left: 62%;
+  top: 15.2%;
+}
+
+.p3-object6-sign img {
+  position: absolute;
+  width: 100%;
+}
+
+.p3-object6-leftText {
+  position: absolute;
+  width: 8%;
+  height: 60%;
+  top: 23%;
+  left: 8%;
+  font-size: 0.8vw;
+  writing-mode: vertical-lr;
+  transform: scale(-1);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.p3-object6-rightText {
+  position: absolute;
+  width: 8%;
+  height: 60%;
+  top: 23%;
+  right: 8%;
+  font-size: 0.8vw;
+  writing-mode: vertical-lr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.p3-object6-rightText li:nth-child(2) {
+  width: 3%;
+  height: 30%;
+  border: 1px solid var(--pointColor);
+}
+.p3-object6-rightText li:nth-child(3) {
+  width: 40%;
+
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  gap: 0.2vw;
+}
+.p3-object6-rightText li:nth-child(3) span {
+  display: inline-block;
+  position: relative;
+  width: 0.6vw;
+  height: 0.6vw;
+  border-radius: 50%;
+  background-color: var(--pointColor);
+}
+
+.p3-object6-qrcode {
+  position: absolute;
+  width: 4vw;
+  height: 4vw;
+  left: 50%;
+  top: 97%;
+  transform: translate(-50%, -97%);
+}
+.p3-object6-qrcode img {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.p3-object6-iconLogo {
+  position: absolute;
+  width: 11%;
+  height: 2.5vw;
+  left: 74%;
+  top: 88%;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.p3-object6-iconLogo li {
+  width: 1.8vw;
+  height: 1.8vw;
+  background-color: var(--pointColor);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.p3-object6-iconLogo li a {
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+.p3-object6-iconLogo li a i {
+  font-size: 1vw;
 }

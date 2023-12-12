@@ -53,7 +53,7 @@ function App() {
       outerRef.current.style.transform = " translate(-50%, -50%) scale(1)";
     }
   };
-  console.log(intro);
+
   return (
     <div
       className={`App ${intro}`}

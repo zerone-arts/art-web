@@ -98,7 +98,7 @@ function Page2(props) {
           <div className="page2-object2-topBar">
             <div className="page2-object2-topBar-title">
               <h2>Space Gray</h2>
-              <i class="fa-solid fa-arrow-right"></i>
+              <i className="fa-solid fa-arrow-right"></i>
             </div>
 
             <ul>
