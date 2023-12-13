@@ -19,9 +19,6 @@ const object5TitleCircleArr = Array.from(object5TitleCircle);
 function Page3(props) {
   return (
     <div className="p3-container">
-      <div className="p3-bg-anime">
-        <div className="p3-bg-anime-circle"></div>
-      </div>
       <div className="p3-bg">
         <img src={page3Bg} alt="page3Bg" />
       </div>

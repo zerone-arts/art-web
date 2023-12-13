@@ -1,0 +1,87 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kanit:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Kalnia:wght@100;200;300;400;500;600;700&display=swap");
+
+.p4-container {
+  position: relative;
+  width: 100%;
+  height: 45vw;
+  background-color: #c6c2c3;
+  font-family: "Montserrat", sans-serif;
+  display: flex;
+}
+
+.p4-container::before {
+  content: "";
+  position: absolute;
+  width: 90%;
+  height: 2vw;
+  left: 5%;
+  background-color: #5f4fb5;
+}
+
+.p4-title {
+  position: absolute;
+  display: inline-block;
+  width: 100%;
+  height: calc(35% + 5vw);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4vw;
+  font-family: "Kalnia", sans-serif;
+  color: rgb(48, 36, 0);
+}
+
+.p4-slide-Wrapper {
+  position: relative;
+  height: 50%;
+  top: 35%;
+  overflow: auto;
+  display: flex;
+  gap: 2vw;
+}
+
+.p4-slide-Wrapper ul {
+  position: relative;
+  top: 10%;
+  height: 80%;
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 2vw;
+  animation: test 30s linear infinite;
+}
+
+@keyframes test {
+  0% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(-100%);
+  }
+  50.001% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+
+@keyframes test2 {
+  0% {
+    transition: translateX(0);
+  }
+  100% {
+    transform: translateX(-200%);
+  }
+}
+
+.p4-slide-Wrapper ul li {
+  background-color: white;
+  width: 15vw;
+  box-shadow: 0.3vw 0.15vw 0.2vw rgba(0, 0, 0, 0.5);
+  text-align: right;
+}
