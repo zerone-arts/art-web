@@ -8,7 +8,7 @@
 .p4-container {
   position: relative;
   width: 100%;
-  height: 45vw;
+  height: 60vw;
   background-color: #c6c2c3;
   font-family: "Montserrat", sans-serif;
   display: flex;
@@ -38,50 +38,28 @@
 
 .p4-slide-Wrapper {
   position: relative;
-  height: 50%;
+  height: 60%;
   top: 35%;
   overflow: auto;
   display: flex;
-  gap: 2vw;
 }
 
-.p4-slide-Wrapper ul {
+.p4-slideBox {
   position: relative;
   top: 10%;
   height: 80%;
   display: flex;
   flex-wrap: nowrap;
-  gap: 2vw;
-  animation: test 30s linear infinite;
 }
 
-@keyframes test {
-  0% {
-    transform: translateX(0);
-  }
-  50% {
-    transform: translateX(-100%);
-  }
-  50.001% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-100%);
-  }
-}
-
-@keyframes test2 {
-  0% {
-    transition: translateX(0);
-  }
-  100% {
-    transform: translateX(-200%);
-  }
-}
-
-.p4-slide-Wrapper ul li {
+.p4-slideBox > li {
+  position: relative;
   background-color: white;
-  width: 15vw;
+  width: 23vw;
   box-shadow: 0.3vw 0.15vw 0.2vw rgba(0, 0, 0, 0.5);
-  text-align: right;
+  margin-right: 2vw;
+}
+
+.p4-slide-Wrapper ul > li:nth-child(1) {
+  width: 20vw;
 }
