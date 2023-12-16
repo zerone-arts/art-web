@@ -83,6 +83,20 @@
   height: 60%;
 }
 
+.page4-object1:hover > .page4-object1-ImgWrapper li:nth-child(1) {
+  height: 100%;
+}
+.page4-object1:hover > .page4-object1-ImgWrapper li:nth-child(1) img {
+  top: 0;
+}
+
+.page4-object1:hover > .page4-object1-ImgWrapper li:nth-child(3) {
+  height: 100%;
+}
+.page4-object1:hover > .page4-object1-ImgWrapper li:nth-child(3) img {
+  top: 0;
+}
+
 .page4-object1-ImgWrapper li {
   position: relative;
   width: 4vw;
@@ -92,6 +106,7 @@
 
 .page4-object1-ImgWrapper li:nth-child(1) {
   height: 70%;
+  transition: 1s all;
   overflow: hidden;
 }
 .page4-object1-ImgWrapper li:nth-child(1) img {
@@ -99,6 +114,7 @@
   width: 20vw;
   left: -98%;
   top: -32%;
+  transition: 1s all;
 }
 .page4-object1-ImgWrapper li:nth-child(2) {
   height: 100%;
@@ -113,6 +129,7 @@
 .page4-object1-ImgWrapper li:nth-child(3) {
   height: 70%;
   overflow: hidden;
+  transition: 1s all;
 }
 
 .page4-object1-ImgWrapper li:nth-child(3) img {
@@ -120,6 +137,7 @@
   width: 20vw;
   left: -323%;
   top: -32%;
+  transition: 1s all;
 }
 
 .page4-object1-line {
@@ -319,4 +337,197 @@
 }
 .page4-object2-textBox-5 p:nth-child(3) {
   top: -0.3vw;
+}
+
+.p4-slideBox > li:nth-child(3) {
+  width: 18vw;
+  overflow: hidden;
+}
+
+.page4-object3-bg {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: black;
+}
+
+.page4-object3-bg img {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 18vw;
+  height: 29vw;
+  filter: brightness(70%);
+}
+
+.page4-object3-circle {
+  position: absolute;
+  width: 6.8vw;
+  height: 6.8vw;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background-color: rgb(98, 98, 98);
+  border: 0.1vw solid white;
+  color: white;
+  font-size: 0.4vw;
+  text-align: center;
+}
+
+.page4-object3-imgBox {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 6.6vw;
+  height: 6.6vw;
+  background-color: black;
+  border-radius: 50%;
+  overflow: hidden;
+  z-index: 10;
+  transition: 1s;
+  transform-origin: center;
+}
+.page4-object3-imgBox:hover {
+  width: 18vw;
+  height: 30vw;
+  border-radius: 0%;
+}
+.page4-object3-imgBox:hover > img {
+  left: 0vw;
+  top: 0.5vw;
+}
+
+.page4-object3-imgBox img {
+  position: absolute;
+  left: -5.65vw;
+  top: -11.1vw;
+  width: 18vw;
+  height: 29vw;
+  transition: 1s;
+}
+
+.page4-object3-circle span {
+  position: absolute;
+  top: -0.75vw;
+  transform-origin: 0 4vw;
+}
+
+.page4-object3-Plus {
+  position: absolute;
+  width: 1.8vw;
+  height: 1.8vw;
+}
+
+.page4-object3-Plus::before {
+  position: absolute;
+  content: "";
+  width: 0.1vw;
+  height: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: white;
+}
+.page4-object3-Plus::after {
+  position: absolute;
+  content: "";
+  height: 0.1vw;
+  width: 100%;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: white;
+}
+
+#plus-top {
+  left: 72%;
+  top: 25%;
+}
+#plus-bottom {
+  right: 72%;
+  bottom: 25%;
+}
+
+.page4-object3-date {
+  position: absolute;
+  width: 1.8vw;
+  height: 15%;
+  top: 25%;
+  right: 72%;
+  color: white;
+  font-size: 0.4vw;
+  writing-mode: vertical-lr;
+  transform: scale(-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+}
+
+.page4-object3-date p span {
+  position: relative;
+  display: inline-block;
+  width: 0.1vw;
+  border-left: 0.05vw solid white;
+  left: 0.05vw;
+  height: 50%;
+  margin-bottom: 0.6vw;
+}
+.page4-object3-week {
+  position: absolute;
+  width: 1.8vw;
+  height: 15%;
+  bottom: 33%;
+  left: 72%;
+  color: white;
+  font-size: 0.4vw;
+  writing-mode: vertical-lr;
+  transform: scale(-1);
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+}
+.page4-object3-week p:nth-child(1) {
+  position: relative;
+  display: inline-block;
+  text-align: right;
+  top: -0.15vw;
+}
+.page4-object3-week p:nth-child(2) {
+  display: inline-block;
+}
+
+.page4-object3-week p span {
+  position: relative;
+  display: inline-block;
+  width: 0.1vw;
+  height: 50%;
+  border-left: 0.05vw solid white;
+  left: 0.05vw;
+  margin-top: 0.6vw;
+}
+
+.page4-object3-title {
+  position: absolute;
+  width: 3vw;
+  height: 6vw;
+  transform: scale(-1) translateX(50%);
+  writing-mode: vertical-lr;
+  color: white;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 0.6vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: end;
+  left: 50%;
+}
+#title-top {
+  top: 3vw;
+}
+
+#title-bottom {
+  height: 5vw;
+  bottom: 4vw;
+  align-items: start;
 }

@@ -5,11 +5,17 @@ import page4Object1Img from "../assets/img/page4-object1-Img.jpeg";
 import page4Object1Sign from "../assets/img/page4-object1-sign.png";
 import page4Object2Img11 from "../assets/img/page4-object2-1.png";
 import page4Object2Img12 from "../assets/img/page4-object2-2.png";
+import page4Object3Img from "../assets/img/page4-object3-img.png";
+import page4Object3ImgBlur from "../assets/img/page4-object3-img-blur.png";
 function Page4(props) {
   const slideUlRef = useRef(null);
   const [isPlay, setIsPlay] = useState(true);
   const [playHover, setPlayHover] = useState(false);
   const [px, setPx] = useState(0);
+
+  const happyWeekendText =
+    "•HAPPY WEEKEND •HAPPY WEEKEND •HAPPY WEEKEND •HAPPY WEEKEND";
+  const happyWeekend = Array.from(happyWeekendText);
 
   let ulWidth = slideUlRef.current?.clientWidth;
 
@@ -117,7 +123,50 @@ function Page4(props) {
               </div>
             </div>
           </li>
-          <li className="page4-object3"></li>
+          <li className="page4-object3">
+            <div className="page4-object3-bg">
+              <img src={page4Object3ImgBlur} alt="page4Object3ImgBlur" />
+            </div>
+            <div className="page4-object3-circle">
+              <div className="page4-object3-imgBox">
+                <img src={page4Object3Img} alt="page4Object3Img" />
+              </div>
+              {happyWeekend.map((item, idx) => {
+                return (
+                  <span
+                    key={idx}
+                    style={{ transform: `rotate(${idx * 6}deg)` }}
+                  >
+                    {item}
+                  </span>
+                );
+              })}
+            </div>
+            <div className="page4-object3-Plus" id="plus-top"></div>
+            <div className="page4-object3-Plus" id="plus-bottom"></div>
+            <div className="page4-object3-date">
+              <p>december</p>
+              <p>
+                <span></span>(2023)
+              </p>
+              <p>16</p>
+            </div>
+            <div className="page4-object3-week">
+              <p>saturday</p>
+              <p>
+                TODAY<span></span>
+              </p>
+            </div>
+            <div className="page4-object3-title" id="title-top">
+              <p>camera</p>
+              <p> I want to buy a </p>
+            </div>
+            <div className="page4-object3-title" id="title-bottom">
+              <p>Artist</p>
+              <p>Photograph</p>
+            </div>
+            <div className="page4-object3-barcode"></div>
+          </li>
           <li className="page4-object4"></li>
           <li className="page4-object5"></li>
           <li className="page4-object6"></li>
