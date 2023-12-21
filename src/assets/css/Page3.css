@@ -208,6 +208,8 @@
   right: 2vw;
   font-family: "Playfair Display", sans-serif;
   display: flex;
+  transition: 1s ease-out;
+  transition-delay: 1s;
 }
 
 .p3-object1-num {
@@ -286,6 +288,8 @@
   left: 2vw;
   background-color: white;
   font-family: "Playfair Display", sans-serif;
+  transition: 1s ease-out;
+  transition-delay: 1s;
 }
 
 .p3-object2-imgBox {
@@ -373,6 +377,8 @@
   background-color: white;
   font-family: "Playfair Display", sans-serif;
   display: flex;
+  transition: 1s ease-out;
+  transition-delay: 1s;
 }
 
 .p3-object3-imgBox {
@@ -548,6 +554,8 @@
   display: flex;
   color: white;
   overflow: hidden;
+  transition: 1s ease-out;
+  transition-delay: 1s;
 }
 
 .p3-object4 img {
@@ -740,6 +748,8 @@
   background-color: white;
   font-family: "Poppins", sans-serif;
   display: flex;
+  transition: 1s ease-out;
+  transition-delay: 1s;
 }
 
 .p3-object5-topBar {
@@ -933,7 +943,8 @@
   font-family: "Poppins", sans-serif;
   display: flex;
   color: var(--pointColor);
-
+  transition: 1s ease-out;
+  transition-delay: 1s;
   --pointColor: #bc8ca6;
 }
 

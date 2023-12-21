@@ -69,13 +69,29 @@
   opacity: 0.8;
 }
 
-#lens {
+#clock {
   position: absolute;
-  width: 300px;
+  width: 200px;
   height: 300px;
-  left: 65%;
-  top: 10%;
+  left: 70%;
+  top: 20%;
   opacity: 0.5;
+}
+#clock img {
+  position: absolute;
+  width: 100%;
+}
+#clock img:nth-child(1) {
+  top: 25%;
+}
+#clock img:nth-child(2) {
+  top: 10%;
+}
+#clock img:nth-child(3) {
+  top: -5%;
+}
+#clock img:nth-child(4) {
+  top: -25%;
 }
 #saturn {
   position: absolute;

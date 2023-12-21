@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect } from "react";
 import "../assets/css/Page3.css";
 import page3Bg from "../assets/img/page3-bg.png";
 import page3BgTitle from "../assets/img/page3-bg-title.png";

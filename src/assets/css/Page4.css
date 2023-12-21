@@ -8,7 +8,7 @@
 .p4-container {
   position: relative;
   width: 100%;
-  height: 60vw;
+  height: 70vw;
   background-color: #c6c2c3;
   font-family: "Montserrat", sans-serif;
   display: flex;
@@ -37,8 +37,8 @@
 }
 
 .p4-slide-Wrapper {
-  position: relative;
-  height: 60%;
+  position: absolute;
+  height: 50%;
   top: 35%;
   overflow: auto;
   display: flex;
@@ -166,179 +166,59 @@
 }
 
 .p4-slideBox > li:nth-child(2) {
-  width: 22vw;
+  width: 20vw;
 }
-
-.page4-object2 img {
-  position: absolute;
+.page4-object2-bg {
   width: 100%;
   height: 100%;
-  transition: 1.5s;
-  filter: brightness(120%);
-}
-
-.page4-object2:hover .page4-object2-img {
-  opacity: 0;
-}
-.page4-object2:hover .page4-object2-textBox {
-  opacity: 0;
-}
-
-.page4-object2-textBox {
   position: absolute;
-  width: 100%;
-  height: 100%;
-  transition: 1s;
+  left: 0;
+  top: 0;
+  overflow: hidden;
 }
-
-.page4-object2-textBox-1 {
-  position: relative;
-  display: block;
-  font-weight: 700;
-  font-size: 1vw;
-  display: flex;
-  width: 20%;
-  align-items: center;
-  flex-wrap: wrap;
-  left: 65%;
-  top: 8%;
-  height: 13%;
-}
-
-.page4-object2-textBox-1 p {
-  letter-spacing: -0.02vw;
-}
-.page4-object2-textBox-1 p:nth-child(1) {
-  position: relative;
-  display: flex;
-  align-items: center;
-  gap: 0.1vw;
-}
-
-.page4-object2-textBox-1 p:nth-child(1) span {
-  position: relative;
-  display: block;
-  width: 1.5vw;
-  height: 0.3vw;
-  border-bottom: 2px solid black;
-}
-
-.page4-object2-textBox-1 p:nth-child(2) {
-  position: relative;
-  top: -0.5vw;
-}
-.page4-object2-textBox-1 p:nth-child(3) {
-  position: relative;
-  top: -0.9vw;
-}
-
-.page4-object2-textBox-2 {
-  position: relative;
-  display: block;
-  font-weight: 500;
+.page4-object2-text {
+  position: absolute;
+  right: 5%;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 0.6vw;
-  display: flex;
-  width: 25%;
-  align-items: center;
-  flex-wrap: wrap;
-  left: 65%;
-  top: 13%;
+  text-shadow: 1px 1px 1px solid black;
+  font-weight: 500;
+  color: rgb(200, 200, 200);
 }
-
-.page4-object2-textBox-3 {
+.p4-slideBox > li:nth-child(2):hover .page4-object2-text::before {
+  animation: object2TextBar 0.7s infinite;
+}
+.page4-object2-text::before {
   position: absolute;
-  display: block;
+  content: "";
+  width: 0.1vw;
+  height: 100%;
+  right: -5%;
+  border-right: 0.1vw solid rgb(200, 200, 200);
+  opacity: 0;
+}
+
+@keyframes object2TextBar {
+  0% {
+    opacity: 0;
+  }
+  35% {
+    opacity: 0;
+  }
+  70% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+.page4-object2-bg img {
   width: 100%;
-  height: 30%;
 
-  font-size: 0.8vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex-wrap: wrap;
-  top: 35%;
+  filter: brightness(90%);
 }
-
-.page4-object2-textBox-3 h2 {
-  font-size: 2vw;
-  font-weight: 700;
-}
-.page4-object2-textBox-3 p:nth-child(2) {
-  position: relative;
-  left: 10%;
-  font-size: 0.5vw;
-  font-weight: 700;
-}
-.page4-object2-textBox-3 p:nth-child(3) {
-  position: relative;
-  left: 25%;
-  font-size: 0.5vw;
-  font-weight: 700;
-}
-
-.page4-object2-textBox-4 {
-  position: relative;
-  width: 15%;
-  height: 10%;
-  display: flex;
-  flex-wrap: wrap;
-  left: 65%;
-  top: 55%;
-}
-.page4-object2-textBox-4 li {
-  position: relative;
-  width: 30%;
-  height: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-weight: 700;
-  font-size: 1.5vw;
-}
-.page4-object2-textBox-4 li:nth-child(2) {
-  left: -5%;
-}
-.page4-object2-textBox-4 li:nth-child(3) {
-  left: -12%;
-}
-.page4-object2-textBox-4 li:nth-child(4) {
-  top: -10%;
-  font-size: 1.4vw;
-}
-.page4-object2-textBox-4 li:nth-child(5) {
-  top: -12%;
-  left: -1%;
-  font-size: 1.4vw;
-}
-.page4-object2-textBox-4 li:nth-child(6) {
-  top: -11%;
-  left: -6%;
-  font-size: 1.4vw;
-}
-
-.page4-object2-textBox-5 {
-  position: relative;
-  display: block;
-  width: 40%;
-  height: 10%;
-  display: flex;
-  flex-wrap: wrap;
-  left: 65%;
-  top: 58%;
-  font-size: 0.4vw;
-  font-weight: 700;
-}
-.page4-object2-textBox-5 p {
-  width: 100%;
-  position: relative;
-}
-.page4-object2-textBox-5 p:nth-child(2) {
-  top: -0.4vw;
-}
-.page4-object2-textBox-5 p:nth-child(3) {
-  top: -0.3vw;
-}
-
 .p4-slideBox > li:nth-child(3) {
   width: 18vw;
   overflow: hidden;
@@ -748,7 +628,7 @@
 }
 
 .p4-slideBox > li:nth-child(6) {
-  width: 19vw;
+  width: 18vw;
   font-family: "Poppins", sans-serif;
 }
 
@@ -766,98 +646,103 @@
   width: 100%;
 }
 
-.page4-object6-date {
-  position: absolute;
-  font-size: 0.6vw;
-  font-weight: 500;
-  color: white;
-  right: 5%;
-  top: 5%;
-}
-.page4-object6-logo {
-  position: absolute;
-  height: 7.5%;
-  left: 50%;
-  top: 20%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: space-between;
-  transform: translate(-50%, 0%);
-  color: white;
-  /* border: 1px solid red; */
-}
-
-.page4-object6-logo i {
-  font-size: 1.5vw;
-}
-.page4-object6-logo p {
-  font-size: 0.3vw;
-  font-weight: 300;
-}
-
 .page4-object6-title {
   position: absolute;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 600;
+  font-size: 1.3vw;
+  top: 15%;
   left: 50%;
-  top: 37%;
-  height: 10%;
-  justify-content: space-between;
-  transform: translate(-50%, 0%);
-  color: white;
-}
-
-.page4-object6-title h2 {
-  position: relative;
-  color: black;
-  top: -1vw;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-  letter-spacing: 0.05vw;
-  font-size: 1.8vw;
-}
-
-.page4-object6-title p {
-  font-family: "Dancing Script", cursive;
-  font-weight: 100;
-  font-size: 0.7vw;
-  display: inline-block;
-  position: relative;
-  left: -0.5vw;
-  transform: rotate(3deg);
-  letter-spacing: 0.05vw;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
-}
-
-.page4-object6-searchBox {
-  z-index: 10%;
-  position: absolute;
-  left: 50%;
-  top: 53%;
-  width: 53%;
-  height: 4%;
   transform: translateX(-50%);
-  background-color: white;
-  border-radius: 10vw;
-  font-size: 0.5vw;
+  width: 47%;
+  text-align: center;
+}
+
+.page4-object6-day {
+  position: absolute;
+  width: 44%;
+  height: 2vw;
+  top: 23%;
+  left: 50%;
+  transform: translateX(-50%);
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 0 0.6vw 0 0.6vw;
+  font-size: 0.46vw;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 500;
 }
 
-.page4-object6-searchBox p {
-  font-size: 0.45vw;
-  position: absolute;
-  left: 1.8vw;
+.page4-object6-day li:last-child {
+  background-color: rgba(37, 37, 37, 0.8);
+  width: 1vw;
+  height: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
 }
 
-.page4-object6-textBox {
+.page4-object6-day li {
+  width: 1vw;
+  height: 1vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+}
+
+.page4-object6-date {
   position: absolute;
+  top: 31%;
   left: 50%;
-  top: 62%;
   transform: translateX(-50%);
-  width: 53%;
-  height: 4%;
+  font-size: 0.5vw;
+  color: rgba(255, 255, 255, 0.8);
+  font-weight: 200;
 }
-.page4-object6-textBox h2 {
-  font-size: 5vw;
+
+.page4-object6-logo {
+  position: absolute;
+  width: 1.5vw;
+  height: 1vw;
+  top: 45%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 0.15vw solid rgba(255, 255, 255, 0.8);
+  border-right: 0.15vw solid rgba(255, 255, 255, 0.8);
+}
+
+.page4-object6-logo::before {
+  position: absolute;
+  content: "";
+  width: 0.12vw;
+  height: 1.7vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.page4-object6-text {
+  position: absolute;
+  width: 80%;
+  left: 50%;
+  top: 59%;
+  transform: translate(-50%, 0%);
+  font-size: 0.5vw;
+  text-align: center;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.p4-bottom-text {
+  position: absolute;
+  bottom: 8%;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 1vw;
+  font-family: "Kalnia", sans-serif;
+  color: rgb(48, 36, 0);
+  letter-spacing: 0.1vw;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
 }

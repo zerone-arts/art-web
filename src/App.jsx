@@ -70,7 +70,7 @@ function App() {
       </div>
       <Intro setIntro={setIntro} />
       <Page1 mouseX={mouseX} mouseY={mouseY} intro={intro} />
-      <Page2 />
+      <Page2 mouseX={mouseX} mouseY={mouseY} />
       <Page3 />
       <Page4 />
     </div>

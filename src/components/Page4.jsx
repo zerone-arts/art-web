@@ -3,19 +3,19 @@ import "../assets/css/Page4.css";
 import { DownUseInterval } from "../assets/utils";
 import page4Object1Img from "../assets/img/page4-object1-Img.jpeg";
 import page4Object1Sign from "../assets/img/page4-object1-sign.png";
-import page4Object2Img11 from "../assets/img/page4-object2-1.png";
-import page4Object2Img12 from "../assets/img/page4-object2-2.png";
+import page4Object2Img from "../assets/img/page4-object2-Img.jpeg";
 import page4Object3Img from "../assets/img/page4-object3-img.png";
 import page4Object3ImgBlur from "../assets/img/page4-object3-img-blur.png";
 import page4Object4Img from "../assets/img/page4-object4-Img.png";
 import page4Object5Img from "../assets/img/page4-object5-Img.png";
-import page4Object6Img from "../assets/img/page4-object6-Img.jpeg";
+import page4Object6Img from "../assets/img/page4-object6-img.png";
 
 function Page4(props) {
   const slideUlRef = useRef(null);
   const [isPlay, setIsPlay] = useState(true);
   const [playHover, setPlayHover] = useState(false);
   const [px, setPx] = useState(0);
+  const [bottomText, setBottomText] = useState("click to stop");
 
   const happyWeekendText =
     "•HAPPY WEEKEND •HAPPY WEEKEND •HAPPY WEEKEND •HAPPY WEEKEND";
@@ -25,8 +25,8 @@ function Page4(props) {
 
   DownUseInterval(
     () => {
-      // setPx(px + 1);
-      setPx(px);
+      setPx(px + 1);
+      // setPx(px);
       if (px === ulWidth) {
         setIsPlay(false);
       }
@@ -43,8 +43,10 @@ function Page4(props) {
   useEffect(() => {
     if (playHover) {
       setIsPlay(false);
+      setBottomText("click to start");
     } else {
       setIsPlay(true);
+      setBottomText("click to stop");
     }
   }, [playHover]);
 
@@ -53,10 +55,11 @@ function Page4(props) {
       <div className="p4-title">Art Magazine</div>
       <div
         className="p4-slide-Wrapper"
-        onMouseOver={() => setPlayHover(true)}
-        onMouseLeave={() => {
-          setPlayHover(false);
-        }}
+        // onMouseOver={() => setPlayHover(true)}
+        // onMouseLeave={() => {
+        //   setPlayHover(false);
+        // }}
+        onClick={() => (!playHover ? setPlayHover(true) : setPlayHover(false))}
       >
         <ul
           className="p4-slideBox"
@@ -90,42 +93,11 @@ function Page4(props) {
             </div>
           </li>
           <li className="page4-object2">
-            <img src={page4Object2Img11} alt="page4Object2Img11" />
-            <img
-              className="page4-object2-img"
-              src={page4Object2Img12}
-              alt="page4Object2Img12"
-            />
-            <div className="page4-object2-textBox">
-              <div className="page4-object2-textBox-1">
-                <p>
-                  De<span></span>
-                </p>
-                <p>Vision</p>
-                <p>010</p>
-              </div>
-              <div className="page4-object2-textBox-2">23 - 12 - 15</div>
-              <div className="page4-object2-textBox-3">
-                <h2>
-                  Kim <br />
-                  Chunsik
-                </h2>
-                <p>Artist</p>
-                <p>Just write something down</p>
-              </div>
-              <ul className="page4-object2-textBox-4">
-                <li>Z</li>
-                <li>e</li>
-                <li>r</li>
-                <li>O</li>
-                <li>n</li>
-                <li>e</li>
-              </ul>
-              <div className="page4-object2-textBox-5">
-                <p>From 19 30 PM</p>
-                <p>Third week Friday</p>
-                <p>Lorem ipsum sit consectetur.</p>
-              </div>
+            <div className="page4-object2-bg">
+              <img src={page4Object2Img} alt="page4Object2Img" />
+            </div>
+            <div className="page4-object2-text">
+              <p>" Why can't I be happy? "</p>
             </div>
           </li>
           <li className="page4-object3">
@@ -216,26 +188,21 @@ function Page4(props) {
             <div className="page4-object6-bg">
               <img src={page4Object6Img} alt="page4Object6Img" />
             </div>
-            <div className="page4-object6-date">Mon, 18 Dec 2023</div>
-            <div className="page4-object6-logo">
-              <i className="fa-brands fa-instagram"></i>
-              <p>Daily Instagram Stories</p>
+            <div className="page4-object6-title">Ending Soon</div>
+            <ul className="page4-object6-day">
+              <li>25</li>
+              <li>26</li>
+              <li>27</li>
+              <li>28</li>
+              <li>29</li>
+              <li>30</li>
+              <li>31</li>
+            </ul>
+            <div className="page4-object6-date">December. 2023</div>
+            <div className="page4-object6-logo"></div>
+            <div className="page4-object6-text">
+              <p>" It's so hard that I'll remember it. It's the worst "</p>
             </div>
-            <div className="page4-object6-title">
-              <p>Hello</p>
-              <h2>Monday</h2>
-            </div>
-            <div className="page4-object6-searchBox">
-              <i className="fa-solid fa-magnifying-glass"></i>
-              <p>Hello :)</p>
-              <i className="fa-solid fa-microphone"></i>
-            </div>
-            <div className="page4-object6-textBox">
-              <p>quotes</p>
-              <p>Lorem, ipsum dolor.</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing.</p>
-            </div>
-            {/* <div className="page4-object6-bottomBox"></div> */}
           </li>
         </ul>
         <ul
@@ -270,42 +237,11 @@ function Page4(props) {
             </div>
           </li>
           <li className="page4-object2">
-            <img src={page4Object2Img11} alt="page4Object2Img11" />
-            <img
-              className="page4-object2-img"
-              src={page4Object2Img12}
-              alt="page4Object2Img12"
-            />
-            <div className="page4-object2-textBox">
-              <div className="page4-object2-textBox-1">
-                <p>
-                  De<span></span>
-                </p>
-                <p>Vision</p>
-                <p>010</p>
-              </div>
-              <div className="page4-object2-textBox-2">23 - 12 - 15</div>
-              <div className="page4-object2-textBox-3">
-                <h2>
-                  Kim <br />
-                  Chunsik
-                </h2>
-                <p>Artist</p>
-                <p>Just write something down</p>
-              </div>
-              <ul className="page4-object2-textBox-4">
-                <li>Z</li>
-                <li>e</li>
-                <li>r</li>
-                <li>O</li>
-                <li>n</li>
-                <li>e</li>
-              </ul>
-              <div className="page4-object2-textBox-5">
-                <p>From 19 30 PM</p>
-                <p>Third week Friday</p>
-                <p>Lorem ipsum sit consectetur.</p>
-              </div>
+            <div className="page4-object2-bg">
+              <img src={page4Object2Img} alt="page4Object2Img" />
+            </div>
+            <div className="page4-object2-text">
+              <p>" Why can't I be happy? "</p>
             </div>
           </li>
           <li className="page4-object3">
@@ -392,9 +328,29 @@ function Page4(props) {
               <li>2023</li>
             </ul>
           </li>
-          <li className="page4-object6"></li>
+          <li className="page4-object6">
+            <div className="page4-object6-bg">
+              <img src={page4Object6Img} alt="page4Object6Img" />
+            </div>
+            <div className="page4-object6-title">Ending Soon</div>
+            <ul className="page4-object6-day">
+              <li>25</li>
+              <li>26</li>
+              <li>27</li>
+              <li>28</li>
+              <li>29</li>
+              <li>30</li>
+              <li>31</li>
+            </ul>
+            <div className="page4-object6-date">December. 2023</div>
+            <div className="page4-object6-logo"></div>
+            <div className="page4-object6-text">
+              <p>" It's so hard that I'll remember it. It's the worst "</p>
+            </div>
+          </li>
         </ul>
       </div>
+      <p className="p4-bottom-text">{bottomText}</p>
     </div>
   );
 }

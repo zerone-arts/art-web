@@ -35,6 +35,7 @@
   height: 100%;
   overflow: hidden;
   z-index: 1;
+  transition: 1s ease-out;
 }
 
 #page2-object1 ul:nth-child(1) {

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useState } from "react";
 import "../assets/css/Page2.css";
 import Simg from "../assets/img/page2-object2-3.png";
 import Mimg from "../assets/img/page2-object2-2.jpeg";
@@ -12,11 +12,87 @@ import object4Img6 from "../assets/img/page2-object4-6.jpeg";
 import object4Img7 from "../assets/img/page2-object4-7.jpeg";
 import object4Img8 from "../assets/img/page2-object4-8.jpeg";
 
-function Page2(props) {
+function Page2({ mouseX, mouseY }) {
+  const page2Object1Ref = useRef(null);
+  const page2Object2Ref = useRef(null);
+  const page2Object3Ref = useRef(null);
+  const page2Object4Ref = useRef(null);
+  const Page2Ref = useRef(null);
+  const object4Img1Ref = useRef(null);
+  const object4Img2Ref = useRef(null);
+  const object4Img3Ref = useRef(null);
+  const object4Img4Ref = useRef(null);
+  const object4Img5Ref = useRef(null);
+  const object4Img6Ref = useRef(null);
+  const object4Img7Ref = useRef(null);
+  const object4Img8Ref = useRef(null);
+
+  const [pageX, setPageX] = useState(null);
+  const [pageY, setPageY] = useState(null);
+
+  const onScroll = () => {
+    if (window.scrollY > page2Object1Ref.current?.getBoundingClientRect().top) {
+      page2Object1Ref.current.style.transform = "translateX(0%)";
+    }
+  };
+
+  useEffect(() => {
+    //bg
+    page2Object2Ref.current.style.transform = `translate(${
+      (mouseX - pageX) * -0.03
+    }px,${(mouseY - pageY) * -0.03}px)`;
+    page2Object3Ref.current.style.transform = `translate(${
+      (mouseX - pageX) * 0.03
+    }px,${(mouseY - pageY) * 0.03}px)`;
+    page2Object4Ref.current.style.transform = `translate(${
+      (mouseX - pageX) * -0.02
+    }px,${(mouseY - pageY) * -0.02}px)`;
+
+    object4Img2Ref.current.style.transform = `translate(${
+      (mouseX - pageX) * -0.04
+    }px,${(mouseY - pageY) * -0.04}px)`;
+    object4Img3Ref.current.style.transform = `translate(${
+      (mouseX - pageX) * -0.04
+    }px,${(mouseY - pageY) * -0.04}px)`;
+    object4Img4Ref.current.style.transform = `translate(${
+      (mouseX - pageX) * -0.04
+    }px,${(mouseY - pageY) * -0.04}px)`;
+    object4Img5Ref.current.style.transform = `translate(${
+      (mouseX - pageX) * -0.04
+    }px,${(mouseY - pageY) * -0.04}px)`;
+    object4Img6Ref.current.style.transform = `translate(${
+      (mouseX - pageX) * -0.04
+    }px,${(mouseY - pageY) * -0.04}px)`;
+    object4Img7Ref.current.style.transform = `translate(${
+      (mouseX - pageX) * -0.04
+    }px,${(mouseY - pageY) * -0.04}px)`;
+    object4Img8Ref.current.style.transform = `translate(${
+      (mouseX - pageX) * -0.04
+    }px,${(mouseY - pageY) * -0.04}px)`;
+  }, [mouseX, mouseY]);
+
+  useEffect(() => {
+    setPageX(Page2Ref.current.clientWidth / 2);
+    setPageY(Page2Ref.current.clientHeight / 2);
+  }, []);
+
+  useEffect(() => {
+    window.addEventListener("scroll", onScroll);
+    return () => {
+      window.removeEventListener("scroll", onScroll);
+    };
+  }, []);
+  // console.log(page2Object1Ref.current?.getBoundingClientRect().top);
   return (
-    <div className="p2-container">
+    <div className="p2-container" ref={Page2Ref}>
       <div className="page2-objects">
-        <div id="page2-object1">
+        <div
+          id="page2-object1"
+          ref={page2Object1Ref}
+          style={{
+            transform: "translateX(100%)",
+          }}
+        >
           <ul>
             <li>
               <p>
@@ -75,7 +151,13 @@ function Page2(props) {
             </p>
           </div>
         </div>
-        <div id="page2-object2">
+        <div
+          id="page2-object2"
+          ref={page2Object2Ref}
+          style={{
+            transform: "translateX(-80%)",
+          }}
+        >
           <div className="page2-object2-bg">
             <div className="page2-object2-bg-shapes-Square">
               <ul className="page2-object2-bg-shapes-Square-text">
@@ -141,7 +223,13 @@ function Page2(props) {
             <img src={Mimg} alt="Mimg" />
           </div>
         </div>
-        <div id="page2-object3">
+        <div
+          id="page2-object3"
+          ref={page2Object3Ref}
+          style={{
+            transform: "translateX(80%)",
+          }}
+        >
           <div className="page2-object3-bg">
             <div className="page2-object3-bg-logo">Z</div>
           </div>
@@ -165,7 +253,13 @@ function Page2(props) {
             <li>Installations</li>
           </ul>
         </div>
-        <div id="page2-object4">
+        <div
+          id="page2-object4"
+          ref={page2Object4Ref}
+          style={{
+            transform: "translateX(-80%)",
+          }}
+        >
           <div className="page2-object4-bg">
             <div className="page2-object4-bg-shapes-Square">
               <div className="page2-object4-bg-shapes-Square-text1">
@@ -232,29 +326,29 @@ function Page2(props) {
             </div>
             <div className="page2-object4-imgBox">
               <ul>
-                <li>
+                <li ref={object4Img1Ref}>
                   <img src={object4Img1} alt="object4Img1" />
                 </li>
-                <li>
+                <li ref={object4Img2Ref}>
                   <img src={object4Img2} alt="object4Img2" />
                 </li>
-                <li>
+                <li ref={object4Img3Ref}>
                   <img src={object4Img3} alt="object4Img3" />
                 </li>
 
-                <li>
+                <li ref={object4Img4Ref}>
                   <img src={object4Img7} alt="object4Img4" />
                 </li>
-                <li>
+                <li ref={object4Img5Ref}>
                   <img src={object4Img5} alt="object4Img5" />
                 </li>
-                <li>
+                <li ref={object4Img6Ref}>
                   <img src={object4Img6} alt="object4Img6" />
                 </li>
-                <li>
+                <li ref={object4Img7Ref}>
                   <img src={object4Img4} alt="object4Img7" />
                 </li>
-                <li>
+                <li ref={object4Img8Ref}>
                   <img src={object4Img8} alt="object4Img8" />
                 </li>
               </ul>

@@ -4,7 +4,10 @@ import gsap from "gsap";
 import { ReactComponent as NodeIcon } from "../assets/icon/nodeIcon.svg";
 import koFlag from "../assets/img/Koflag.png";
 import profile2 from "../assets/img/profile2.jpeg";
-import divid from "../assets/img/divid.png";
+import clock1 from "../assets/img/clock1.png";
+import clock2 from "../assets/img/clock2.png";
+import clock3 from "../assets/img/clock3.png";
+import clock4 from "../assets/img/clock4.png";
 import saturn from "../assets/img/saturn.png";
 import timer from "../assets/img/timer.png";
 
@@ -20,7 +23,7 @@ function Page1({ mouseX, mouseY, intro }) {
   const centerBoxLineRef = useRef(null);
   const leftTopCircleBg = useRef(null);
   const RightBottomCircleBg = useRef(null);
-  const lensBg = useRef(null);
+  const clockBg = useRef(null);
   const saturnBg = useRef(null);
   const arrowRef = useRef(null);
   const topLeftRef = useRef(null);
@@ -28,6 +31,11 @@ function Page1({ mouseX, mouseY, intro }) {
   const item1Ref = useRef(null);
   const item2Ref = useRef(null);
   const item3Ref = useRef(null);
+
+  const clock1Ref = useRef(null);
+  const clock2Ref = useRef(null);
+  const clock3Ref = useRef(null);
+  const clock4Ref = useRef(null);
 
   useEffect(() => {
     setPageX(Page1Ref.current.clientWidth / 2);
@@ -76,7 +84,7 @@ function Page1({ mouseX, mouseY, intro }) {
     RightBottomCircleBg.current.style.transform = `translate(${
       (mouseX - pageX) * 0.03
     }px,${(mouseY - pageY) * 0.03}px)`;
-    lensBg.current.style.transform = `translate(${(mouseX - pageX) * 0.03}px,${
+    clockBg.current.style.transform = `translateY(${
       (mouseY - pageY) * 0.03
     }px)`;
     saturnBg.current.style.transform = `translate(${
@@ -99,6 +107,37 @@ function Page1({ mouseX, mouseY, intro }) {
     centerBoxLineRef.current.style.transform = `translate(${
       (mouseX - pageX) * -0.01
     }px,${(mouseY - pageY) * -0.01}px)`;
+
+    //clock
+    console.log(mouseX - pageX);
+    if (mouseX - pageX < 0) {
+      clock1Ref.current.style.transform = `translateY(${
+        (mouseX - pageX) * -0.06
+      }px)`;
+      clock2Ref.current.style.transform = `translateY(${
+        (mouseX - pageX) * -0.03
+      }px)`;
+      clock3Ref.current.style.transform = `translateY(${
+        (mouseX - pageX) * 0.03
+      }px)`;
+      clock4Ref.current.style.transform = `translateY(${
+        (mouseX - pageX) * 0.06
+      }px)`;
+    }
+    if (mouseX - pageX > 0) {
+      clock1Ref.current.style.transform = `translateY(${
+        (mouseX - pageX) * 0.06
+      }px)`;
+      clock2Ref.current.style.transform = `translateY(${
+        (mouseX - pageX) * 0.03
+      }px)`;
+      clock3Ref.current.style.transform = `translateY(${
+        (mouseX - pageX) * -0.03
+      }px)`;
+      clock4Ref.current.style.transform = `translateY(${
+        (mouseX - pageX) * -0.06
+      }px)`;
+    }
   }, [mouseX, mouseY]);
 
   return (
@@ -109,8 +148,13 @@ function Page1({ mouseX, mouseY, intro }) {
         <img src={timer} alt="timer" />
         <div className="arrow" ref={arrowRef}></div>
       </div>
+      <div id="clock" ref={clockBg}>
+        <img src={clock1} alt="clock1" ref={clock1Ref} />
+        <img src={clock2} alt="clock2" ref={clock2Ref} />
+        <img src={clock3} alt="clock3" ref={clock3Ref} />
+        <img src={clock4} alt="clock4" ref={clock4Ref} />
+      </div>
 
-      <img src={divid} alt="divid" id="lens" ref={lensBg} />
       <img src={saturn} alt="saturn" id="saturn" ref={saturnBg} />
 
       <div className="center-box" ref={centerBoxRef}>
