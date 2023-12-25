@@ -50,6 +50,17 @@ function Page4(props) {
     }
   }, [playHover]);
 
+  const resize = () => {
+    setPx(0);
+  };
+
+  useEffect(() => {
+    window.addEventListener("resize", resize);
+    return () => {
+      window.removeEventListener("resize", resize);
+    };
+  });
+
   return (
     <div className="p4-container">
       <div className="p4-title">Art Magazine</div>
@@ -350,7 +361,12 @@ function Page4(props) {
           </li>
         </ul>
       </div>
-      <p className="p4-bottom-text">{bottomText}</p>
+      <div className="p4-bottom-text">
+        <p>{bottomText}</p>
+      </div>
+      <div className="p4-text">
+        <h5>Et hoc transibit.</h5>
+      </div>
     </div>
   );
 }

@@ -109,7 +109,7 @@ function Page1({ mouseX, mouseY, intro }) {
     }px,${(mouseY - pageY) * -0.01}px)`;
 
     //clock
-    console.log(mouseX - pageX);
+
     if (mouseX - pageX < 0) {
       clock1Ref.current.style.transform = `translateY(${
         (mouseX - pageX) * -0.06

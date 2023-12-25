@@ -6,6 +6,7 @@ import gsap from "gsap";
 import Page2 from "./components/Page2";
 import Page3 from "./components/Page3";
 import Page4 from "./components/Page4";
+import Page5 from "./components/Page5";
 
 function App() {
   const [mouseX, setMouseX] = useState(null);
@@ -37,7 +38,7 @@ function App() {
   };
   const downHandle = (e) => {
     setMouseDown(true);
-    console.log("down");
+
     innerRef.current.style.transform = " translate(-50%, -50%) scale(0.7)";
     outerRef.current.style.transform = " translate(-50%, -50%) scale(0.5)";
 
@@ -48,7 +49,6 @@ function App() {
 
   const upHandle = (e) => {
     if (mouseDown) {
-      console.log("up");
       setWaveActive("active");
       innerRef.current.style.transform = " translate(-50%, -50%) scale(1)";
       outerRef.current.style.transform = " translate(-50%, -50%) scale(1)";
@@ -73,6 +73,7 @@ function App() {
       <Page2 mouseX={mouseX} mouseY={mouseY} />
       <Page3 />
       <Page4 />
+      <Page5 />
     </div>
   );
 }

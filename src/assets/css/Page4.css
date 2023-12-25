@@ -8,8 +8,8 @@
 .p4-container {
   position: relative;
   width: 100%;
-  height: 70vw;
-  background-color: #c6c2c3;
+  height: 100vw;
+  background: #191f27;
   font-family: "Montserrat", sans-serif;
   display: flex;
 }
@@ -27,19 +27,20 @@
   position: absolute;
   display: inline-block;
   width: 100%;
-  height: calc(35% + 5vw);
+  height: 40vw;
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 4vw;
   font-family: "Kalnia", sans-serif;
-  color: rgb(48, 36, 0);
+  letter-spacing: 1vw;
+  color: white;
 }
 
 .p4-slide-Wrapper {
   position: absolute;
-  height: 50%;
-  top: 35%;
+  height: 33vw;
+  top: 35vw;
   overflow: auto;
   display: flex;
 }
@@ -47,7 +48,7 @@
 .p4-slideBox {
   position: relative;
   top: 10%;
-  height: 80%;
+  height: 28vw;
   display: flex;
   flex-wrap: nowrap;
 }
@@ -737,12 +738,28 @@
 
 .p4-bottom-text {
   position: absolute;
-  bottom: 8%;
-  left: 50%;
-  transform: translateX(-50%);
+  top: 75vw;
+  left: 0%;
+  width: 100%;
+  height: 50vw;
   font-size: 1vw;
   font-family: "Kalnia", sans-serif;
-  color: rgb(48, 36, 0);
+  color: white;
   letter-spacing: 0.1vw;
-  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+
+  display: flex;
+}
+
+.p4-bottom-text p {
+  width: 100%;
+  text-align: center;
+}
+
+.p4-text {
+  position: absolute;
+  right: 2vw;
+  bottom: 0;
+  color: white;
+  letter-spacing: 0.2vw;
+  font-family: "Playfair Display", serif;
 }
