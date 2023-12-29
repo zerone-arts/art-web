@@ -1,11 +1,14 @@
 import React, { useEffect, useRef, useState } from "react";
 import "../assets/css/Page5.css";
-import page5Object1Img from "../assets/img/p5-object1-img.png";
-import page2Object2VideoImg from "../assets/img/p2-object2-video-img.png";
 import { UseInterval } from "../assets/utils";
+import page5Object1Img from "../assets/img/p5-object1-img.png";
+import page5Object2VideoImg from "../assets/img/p5-object2-video-img2.jpeg";
+import page5Object2MainImg from "../assets/img/page5-object2-mainImg.png";
+
 function Page5(props) {
   const [page5Start, setPage5Start] = useState("");
   const [page5Object2Start, setPage5Object2Start] = useState("");
+  const [page5Object2Product, setPage5Object2Product] = useState("");
   const page5Ref = useRef(null);
   const page5Object2Ref = useRef(null);
 
@@ -23,6 +26,12 @@ function Page5(props) {
     } else {
       setPage5Object2Start("page2Active");
     }
+  };
+
+  const page5Object2ProductHandle = () => {
+    page5Object2Product === ""
+      ? setPage5Object2Product("active")
+      : setPage5Object2Product("");
   };
 
   useEffect(() => {
@@ -98,7 +107,46 @@ function Page5(props) {
             <li>B</li>
           </ul>
         </div>
-        <div className="p2-object2-product"></div>
+        <div className={`p2-object2-product ${page5Object2Product}`}>
+          <img
+            src={page5Object2MainImg}
+            alt="page5Object2MainImgs"
+            onClick={page5Object2ProductHandle}
+          />
+          <p>Click</p>
+          <div className="p2-object2-product-nameBox">
+            <div className="p2-object2-product-nameBox-line1"></div>
+            <div className="p2-object2-product-nameBox-line2"></div>
+            <div className="p2-object2-product-nameBox-name">
+              <div>
+                <span></span> Air ZERO Helmet v1
+              </div>
+            </div>
+          </div>
+          <div className="p2-object2-product-priceBox">
+            <div className="p2-object2-product-priceBox-line1"></div>
+            <div className="p2-object2-product-priceBox-line2"></div>
+            <div className="p2-object2-product-priceBox-price">
+              <div>
+                <span></span> $ 500
+              </div>
+            </div>
+          </div>
+          <div className="p2-object2-product-DescriptionBox">
+            <div className="p2-object2-product-DescriptionBox-line1"></div>
+            <div className="p2-object2-product-DescriptionBox-line2"></div>
+            <div className="p2-object2-product-DescriptionBox-Description">
+              <ul>
+                <li>
+                  <span></span> Zero v1 is
+                </li>
+                <li>light as air using titanium and</li>
+                <li> has the added rigidity of </li>
+                <li>Vibranium.</li>
+              </ul>
+            </div>
+          </div>
+        </div>
         <div className="p2-object2-text1">
           <p>PRO</p>
           <p>Samsang</p>
@@ -156,13 +204,9 @@ function Page5(props) {
         </div>
         <div className="p2-object2-videoWrapper">
           <div className="p2-object2-videoBox">
-            <p>VIEW</p>
-            <p> MORE</p>
-            <img src={page2Object2VideoImg} alt="page2Object2VideoImg" />
-          </div>
-          <div className="p2-object2-video-text">
-            Lorem ipsum dolor sit amet consectetur adipisicing toalie elit.
-            Numquam porro <br /> vero omnis enim est.
+            <img src={page5Object2VideoImg} alt="page5Object2VideoImg" />
+            <p>View</p>
+            <p>more</p>
           </div>
         </div>
       </div>
