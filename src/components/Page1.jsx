@@ -4,11 +4,9 @@ import gsap from "gsap";
 import { ReactComponent as NodeIcon } from "../assets/icon/nodeIcon.svg";
 import koFlag from "../assets/img/Koflag.png";
 import profile2 from "../assets/img/profile2.jpeg";
-import clock1 from "../assets/img/clock1.png";
-import clock2 from "../assets/img/clock2.png";
-import clock3 from "../assets/img/clock3.png";
-import clock4 from "../assets/img/clock4.png";
-import saturn from "../assets/img/saturn.png";
+import page1BgImg1 from "../assets/img/page1-bg-Img1.png";
+import page1BgImg2 from "../assets/img/page1-bg-Img2.png";
+
 import timer from "../assets/img/timer.png";
 
 function Page1({ mouseX, mouseY, intro }) {
@@ -21,21 +19,14 @@ function Page1({ mouseX, mouseY, intro }) {
   const centerBoxTitleRef = useRef(null);
   const centerBoxH3Ref = useRef(null);
   const centerBoxLineRef = useRef(null);
-  const leftTopCircleBg = useRef(null);
-  const RightBottomCircleBg = useRef(null);
-  const clockBg = useRef(null);
-  const saturnBg = useRef(null);
+  const sunRef = useRef(null);
+
   const arrowRef = useRef(null);
   const topLeftRef = useRef(null);
   const bottomLeftRef = useRef(null);
   const item1Ref = useRef(null);
   const item2Ref = useRef(null);
   const item3Ref = useRef(null);
-
-  const clock1Ref = useRef(null);
-  const clock2Ref = useRef(null);
-  const clock3Ref = useRef(null);
-  const clock4Ref = useRef(null);
 
   useEffect(() => {
     setPageX(Page1Ref.current.clientWidth / 2);
@@ -78,22 +69,10 @@ function Page1({ mouseX, mouseY, intro }) {
 
   useEffect(() => {
     //bg
-    leftTopCircleBg.current.style.transform = `translate(${
-      (mouseX - pageX) * -0.01
-    }px,${(mouseY - pageY) * -0.01}px)`;
-    RightBottomCircleBg.current.style.transform = `translate(${
-      (mouseX - pageX) * 0.03
-    }px,${(mouseY - pageY) * 0.03}px)`;
-    clockBg.current.style.transform = `translateY(${
-      (mouseY - pageY) * 0.03
-    }px)`;
-    saturnBg.current.style.transform = `translate(${
-      (mouseX - pageX) * -0.03
-    }px,${(mouseY - pageY) * -0.03}px)`;
-
     arrowRef.current.style.transform = `rotate(${
       ((Math.atan2(mouseY - pageY, mouseX - pageX) * 180) / Math.PI) * 1
     }deg)`;
+    sunRef.current.style.transform = `translateX(${(mouseX - pageX) * 0.01}px`;
 
     //object
     centerBoxTitleRef.current.style.transform = `translate(${
@@ -107,55 +86,20 @@ function Page1({ mouseX, mouseY, intro }) {
     centerBoxLineRef.current.style.transform = `translate(${
       (mouseX - pageX) * -0.01
     }px,${(mouseY - pageY) * -0.01}px)`;
-
-    //clock
-
-    if (mouseX - pageX < 0) {
-      clock1Ref.current.style.transform = `translateY(${
-        (mouseX - pageX) * -0.06
-      }px)`;
-      clock2Ref.current.style.transform = `translateY(${
-        (mouseX - pageX) * -0.03
-      }px)`;
-      clock3Ref.current.style.transform = `translateY(${
-        (mouseX - pageX) * 0.03
-      }px)`;
-      clock4Ref.current.style.transform = `translateY(${
-        (mouseX - pageX) * 0.06
-      }px)`;
-    }
-    if (mouseX - pageX > 0) {
-      clock1Ref.current.style.transform = `translateY(${
-        (mouseX - pageX) * 0.06
-      }px)`;
-      clock2Ref.current.style.transform = `translateY(${
-        (mouseX - pageX) * 0.03
-      }px)`;
-      clock3Ref.current.style.transform = `translateY(${
-        (mouseX - pageX) * -0.03
-      }px)`;
-      clock4Ref.current.style.transform = `translateY(${
-        (mouseX - pageX) * -0.06
-      }px)`;
-    }
   }, [mouseX, mouseY]);
 
   return (
     <div className="p1-container" ref={Page1Ref}>
-      <div className="left-top-circle-bg" ref={leftTopCircleBg}></div>
-      <div className="right-bottom-circle-bg" ref={RightBottomCircleBg}></div>
       <div id="timer">
         <img src={timer} alt="timer" />
         <div className="arrow" ref={arrowRef}></div>
       </div>
-      <div id="clock" ref={clockBg}>
-        <img src={clock1} alt="clock1" ref={clock1Ref} />
-        <img src={clock2} alt="clock2" ref={clock2Ref} />
-        <img src={clock3} alt="clock3" ref={clock3Ref} />
-        <img src={clock4} alt="clock4" ref={clock4Ref} />
-      </div>
 
-      <img src={saturn} alt="saturn" id="saturn" ref={saturnBg} />
+      <img id="bgImg1" src={page1BgImg1} alt="page1BgImg1" />
+      <img id="bgImg2" src={page1BgImg2} alt="page1BgImg2" />
+      <div className="moon">
+        <div className="sun" ref={sunRef}></div>
+      </div>
 
       <div className="center-box" ref={centerBoxRef}>
         <div className="title" ref={centerBoxTitleRef}>

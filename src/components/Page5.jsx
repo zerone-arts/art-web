@@ -8,9 +8,11 @@ import page5Object2MainImg from "../assets/img/page5-object2-mainImg.png";
 function Page5(props) {
   const [page5Start, setPage5Start] = useState("");
   const [page5Object2Start, setPage5Object2Start] = useState("");
+  const [page5Object3Start, setPage5Object3Start] = useState("");
   const [page5Object2Product, setPage5Object2Product] = useState("");
   const page5Ref = useRef(null);
   const page5Object2Ref = useRef(null);
+  const page5Object3Ref = useRef(null);
 
   const menuBar = new Array(9).fill("");
 
@@ -25,6 +27,12 @@ function Page5(props) {
       setPage5Object2Start("");
     } else {
       setPage5Object2Start("page2Active");
+    }
+
+    if (page5Object3Ref.current?.getBoundingClientRect().top - 200 > 0) {
+      setPage5Object3Start("");
+    } else {
+      setPage5Object3Start("page3Active");
     }
   };
 
@@ -43,9 +51,13 @@ function Page5(props) {
 
   return (
     <div
-      className={`p5-container ${page5Start} ${page5Object2Start}`}
+      className={`p5-container ${page5Start} ${page5Object2Start} ${page5Object3Start}`}
       ref={page5Ref}
     >
+      <div
+        className="p5-object3-bgColor"
+        style={{ opacity: page5Object3Start === "" ? 0 : 1 }}
+      ></div>
       <div className={`p5-bgLight ${page5Start}`}></div>
       <div className="p5-object1">
         <div className={`p5-object1-circle ${page5Start}`}></div>
@@ -210,6 +222,7 @@ function Page5(props) {
           </div>
         </div>
       </div>
+      <div className="p5-object3" ref={page5Object3Ref}></div>
     </div>
   );
 }
