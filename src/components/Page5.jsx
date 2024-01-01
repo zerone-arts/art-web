@@ -4,7 +4,7 @@ import { UseInterval } from "../assets/utils";
 import page5Object1Img from "../assets/img/p5-object1-img.png";
 import page5Object2VideoImg from "../assets/img/p5-object2-video-img2.jpeg";
 import page5Object2MainImg from "../assets/img/page5-object2-mainImg.png";
-
+import page5Object3BgImg from "../assets/img/page5-object3-bg-img.png";
 function Page5(props) {
   const [page5Start, setPage5Start] = useState("");
   const [page5Object2Start, setPage5Object2Start] = useState("");
@@ -222,7 +222,85 @@ function Page5(props) {
           </div>
         </div>
       </div>
-      <div className="p5-object3" ref={page5Object3Ref}></div>
+      <div className="p5-object3" ref={page5Object3Ref}>
+        <img
+          className={`p5-object3-bg ${page5Object3Start}`}
+          src={page5Object3BgImg}
+          alt="page5Object3BgImg"
+        />
+        <div className={`p5-object3-start ${page5Object3Start}`}>
+          <div className="p5-object3-TitleBox">
+            <div className="p5-object3-Title-top">
+              <p>NEONLIT</p>
+            </div>
+            <div className="p5-object3-Title-bottom">
+              <p>NEONLIT</p>
+            </div>
+          </div>
+          <div className="p5-object3-text">
+            <p>DISCOVER DIGITAL ART AND COLLECT DESIGN</p>
+          </div>
+          <div className="p5-object3-lets">
+            <a href="#">
+              LET'S ORBIT
+              <span class="material-symbols-outlined">arrow_forward</span>
+            </a>
+          </div>
+          <div className="p5-object3-tobBar">
+            <div className="p5-object3-tobBar-logo">NEO</div>
+            <ul>
+              <li>home</li>
+              <li>about</li>
+              <li>token</li>
+              <li>loadmap</li>
+            </ul>
+
+            <div className="p5-object3-tobBar-join">
+              <a href="#">
+                <ion-icon name="globe-outline"></ion-icon>
+              </a>
+              join us
+            </div>
+          </div>
+          <ul className="p5-object3-BottomBar">
+            <li>
+              <h2>27K+</h2>
+              <p>ARTISTS</p>
+            </li>
+            <li>
+              <h2>876K+</h2>
+              <p>ARTWORK</p>
+            </li>
+            <li>
+              <h2>20K+</h2>
+              <p>AUCTION</p>
+            </li>
+            <li>
+              <span></span>
+              <p>PLAY VIDEO</p>
+            </li>
+            <li>
+              <ul>
+                <li>
+                  <a href="#">
+                    <i className="fa-brands fa-youtube"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa-brands fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="#">
+                    <i className="fa-brands fa-x-twitter"></i>
+                  </a>
+                </li>
+              </ul>
+            </li>
+          </ul>
+        </div>
+      </div>
     </div>
   );
 }
