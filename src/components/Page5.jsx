@@ -5,14 +5,20 @@ import page5Object1Img from "../assets/img/p5-object1-img.png";
 import page5Object2VideoImg from "../assets/img/p5-object2-video-img2.jpeg";
 import page5Object2MainImg from "../assets/img/page5-object2-mainImg.png";
 import page5Object3BgImg from "../assets/img/page5-object3-bg-img.png";
+import iPhoneClose from "../assets/img/iphone_close.png";
+import iPhoneOpen from "../assets/img/iphone_open.png";
+
 function Page5(props) {
   const [page5Start, setPage5Start] = useState("");
   const [page5Object2Start, setPage5Object2Start] = useState("");
   const [page5Object3Start, setPage5Object3Start] = useState("");
+  const [page5Object4Start, setPage5Object4Start] = useState("");
+
   const [page5Object2Product, setPage5Object2Product] = useState("");
   const page5Ref = useRef(null);
   const page5Object2Ref = useRef(null);
   const page5Object3Ref = useRef(null);
+  const page5Object4Ref = useRef(null);
 
   const menuBar = new Array(9).fill("");
 
@@ -29,10 +35,18 @@ function Page5(props) {
       setPage5Object2Start("page2Active");
     }
 
-    if (page5Object3Ref.current?.getBoundingClientRect().top - 200 > 0) {
+    if (
+      page5Object3Ref.current?.getBoundingClientRect().top - 200 > 0 ||
+      page5Object3Ref.current?.getBoundingClientRect().bottom < 0
+    ) {
       setPage5Object3Start("");
     } else {
       setPage5Object3Start("page3Active");
+    }
+    if (page5Object4Ref.current?.getBoundingClientRect().top - 200 > 0) {
+      setPage5Object4Start("");
+    } else {
+      setPage5Object4Start("page4Active");
     }
   };
 
@@ -51,7 +65,7 @@ function Page5(props) {
 
   return (
     <div
-      className={`p5-container ${page5Start} ${page5Object2Start} ${page5Object3Start}`}
+      className={`p5-container ${page5Start} ${page5Object2Start}`}
       ref={page5Ref}
     >
       <div
@@ -299,6 +313,34 @@ function Page5(props) {
               </ul>
             </li>
           </ul>
+        </div>
+      </div>
+      <div className={`p5-object4 ${page5Object4Start}`} ref={page5Object4Ref}>
+        <div className={`p5-object4-logo ${page5Object4Start}`}>
+          <i className="fa-brands fa-apple"></i>
+        </div>
+        <ul className={`p5-object4-topLeftBar ${page5Object4Start}`}>
+          <li>iPhone 15 Pro</li>
+          <li>iPhone 15</li>
+          <li>iWatch 9</li>
+          <li>iPad</li>
+          <li>MAC</li>
+          <li>iTV+</li>
+        </ul>
+        <ul className={`p5-object4-topRightBar ${page5Object4Start}`}>
+          <li>
+            <a href="#">
+              <i className="fa-solid fa-magnifying-glass"></i>
+            </a>
+          </li>
+          <li>
+            <div></div>
+          </li>
+        </ul>
+
+        <div className="p5-object4-iphone">
+          <img src={iPhoneOpen} alt="iPhoneOpen" />
+          <img src={iPhoneClose} alt="iPhoneClose" />
         </div>
       </div>
     </div>
