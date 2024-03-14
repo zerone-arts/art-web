@@ -56,7 +56,6 @@ function Page5(props) {
       ? setPage5Object2Product("active")
       : setPage5Object2Product("");
   };
-
   useEffect(() => {
     window.addEventListener("scroll", onScroll);
     return () => {
