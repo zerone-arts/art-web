@@ -18,7 +18,6 @@ function Page5(props) {
   const page5Object2Ref = useRef(null);
   const page5Object3Ref = useRef(null);
   const page5Object4Ref = useRef(null);
-
   const menuBar = new Array(9).fill("");
 
   const onScroll = () => {
