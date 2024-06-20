@@ -21,7 +21,6 @@ function App() {
   const canvasRef = useRef(null);
 
   const [intro, setIntro] = useState("intro-visible");
-  // const [intro, setIntro] = useState("intro-hide");
   const [waveActive, setWaveActive] = useState("hide");
   const [mouseDown, setMouseDown] = useState(false);
 
@@ -45,6 +44,7 @@ function App() {
 
     waveRef.current.style.top = e.clientY + "px";
     waveRef.current.style.left = e.clientX + "px";
+
     setWaveActive("");
   };
 
